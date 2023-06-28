@@ -1,0 +1,107 @@
+@import 'styles/variables';
+
+.contact-form {
+  background: url('../../../../images/icons/yellow-line.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 250px 0 200px;
+
+  @media (max-width: 567px) {
+    background: none;
+  }
+
+  @media (max-width: 1600px) {
+    padding: 200px 0;
+  }
+  @media (max-width: 1100px) {
+    padding: 150px 0;
+  }
+  @media (max-width: 768px) {
+    padding: 120px 0;
+  }
+  @media (max-width: 567px) {
+    padding: 100px 0;
+  }
+  &-form {
+    margin: 100px 0 150px;
+    @media (max-width: 1100px) {
+      margin: 80px 0 120px;
+    }
+    @media (max-width: 768px) {
+      margin: 60px 0 90px;
+    }
+    @media (max-width: 567px) {
+      margin: 40px 0 60px;
+    }
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      @media (max-width: 768px) {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      & > div {
+        width: 45%;
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-check {
+      margin-top: 100px;
+      @media (max-width: 1100px) {
+        margin-top: 80px;
+      }
+      @media (max-width: 768px) {
+        margin-top: 60px;
+      }
+      @media (max-width: 576px) {
+        margin-top: 40px;
+      }
+      &-inputs {
+        margin-top: 32px;
+        max-width: 890px;
+        @media (max-width: 768px) {
+          margin-top: 20px;
+        }
+        label {
+          margin: 0 24px 20px 0;
+          @media (max-width: 768px) {
+            margin: 0 10px 10px 0;
+          }
+        }
+      }
+    }
+    button {
+      margin-top: 80px;
+      width: 137px;
+      @media (max-width: 1100px) {
+        margin-top: 60px;
+      }
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
+      @media (max-width: 576px) {
+        margin-top: 30px;
+      }
+    }
+  }
+  &-mail-bot {
+    @media (max-width: 1100px) {
+      font-size: 46px;
+    }
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+    @media (max-width: 576px) {
+      font-size: 25px;
+    }
+  }
+
+  &-bottom-text {
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+}

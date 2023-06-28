@@ -1,0 +1,51 @@
+.mainPost {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 576px;
+    & p {
+      font-weight: 800;
+      max-width: 368px;
+    }
+    @media (max-width: 1600px) {
+      max-width: 400px ;
+    }
+    @media (max-width: 1300px) {
+      max-width: 320px ;
+    }
+    @media (max-width: 320px) {
+      max-width: 300px;
+    }
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+      & p {
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  
+    & img {
+      width: 576px;
+      height: 576px;
+      @media (max-width: 1600px) {
+        max-width: 400px;
+        height: 400px;
+      }
+      @media (max-width: 1300px) {
+        max-width: 320px;
+        height: 320px;
+      }
+      @media (max-width: 320px) {
+        max-width: 300px;
+      }
+    }
+    &-body-text {
+      font-size: 19px;
+      @media (max-width: 1600px){
+        font-size: 16px;
+      
+      }
+    }
+  }
+  

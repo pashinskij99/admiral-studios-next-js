@@ -1,0 +1,70 @@
+@import 'styles/variables';
+
+.about-us {
+  padding: 150px 0;
+  background-color: $yellow;
+  @media (max-width: 1100px) {
+    padding: 120px 0;
+  }
+  @media (max-width: 768px) {
+    padding: 90px 0;
+  }
+  @media (max-width: 567px) {
+    padding: 30px 0 50px;
+  }
+  &-title {
+    margin-bottom: 100px;
+    @media (max-width: 1100px) {
+      margin-bottom: 80px;
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+    @media (max-width: 567px) {
+      margin-bottom: 20px;
+    }
+  }
+  &-content {
+    overflow: hidden;
+    width: 70%;
+    margin: 0 auto;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 44px;
+    }
+    &-text {
+      p {
+        margin-bottom: 16px;
+      }
+    }
+    svg {
+      height: 100%;
+      width: 140%;
+      margin-bottom: 24px;
+      transform: translateX(-10%);
+      animation: pathAn 1s infinite linear;
+      path {
+        transition: 0.2s;
+      }
+    }
+    &:hover svg path {
+      d: path(
+        'M 0.27 13.2 c 3.5 1.66 12 4.29 18 1.5 c 6 -2.79 18 -14 31 -14 c 13 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 h 0.09 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 12 27 12'
+      );
+    }
+  }
+}
+
+@keyframes pathAn {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-21.1%);
+  }
+}

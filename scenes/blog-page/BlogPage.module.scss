@@ -1,0 +1,114 @@
+.blog-page {
+  padding-bottom: 224px;
+  position: relative;
+  & img {
+    width: 100%;
+    max-height: 920px;
+    object-fit: cover;
+  }
+
+  &-heading {
+    position: relative;
+
+    &-info {
+      position: absolute;
+      bottom: 100px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 64px;
+      & p,
+      & h1 {
+        color: #fff;
+        font-weight: 800;
+      }
+      &-img {
+        height: 100vh;
+        margin-top: -72px;
+        @media (max-width: 1600px) {
+          margin-top: -90px;
+        }
+      }
+      @media (max-width: 1400px) {
+        flex-direction: column;
+        gap: 50px;
+      }
+      @media (max-width: 740px) {
+        gap: 190px;
+      }
+      @media (max-width: 576px) {
+        padding: 0 15px;
+      }
+
+      & h1 {
+        font-size: 52px;
+        @media (max-width: 740px) {
+          font-size: 28px;
+          font-weight: 700;
+          text-align: center;
+        }
+      }
+      & p {
+        font-size: 20px;
+        @media (max-width: 740px) {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      &-main {
+        max-width: 1000px;
+        @media (max-width: 740px) {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          align-items: center;
+        }
+        &-worm {
+          position: relative;
+          max-width: 95px;
+          max-height: 28px;
+          & p {
+            position: absolute;
+            font-weight: 800;
+
+            font-size: 12px;
+            width: 90px;
+            line-height: 20px;
+            top: 4px;
+            left: 5px;
+          }
+        }
+      }
+      &-data {
+        display: flex;
+        align-items: flex-end;
+        @media (max-width: 740px) {
+          justify-content: center;
+        }
+        &-wrapper {
+          display: flex;
+          &-slash {
+            font-size: 20px;
+            padding: 0 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    background-color: #fff;
+    color: #000000;
+    padding: 0 64px;
+    @media (max-width: 576px) {
+      padding: 0 15px;
+    }
+  }
+  @media (max-width: 1600px) {
+    padding-bottom: 150px;
+  }
+  @media (max-width: 576px) {
+    padding-bottom: 90px;
+  }
+}

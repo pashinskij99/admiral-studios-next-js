@@ -1,0 +1,44 @@
+@import 'styles/variables';
+
+.hero {
+  background-color: $blue;
+  position: relative;
+  overflow: hidden;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    @media (max-width: 768px) {
+      padding-bottom: 80px;
+      padding-top: 100px;
+    }
+    @media (max-width: 567px) {
+      padding-bottom: 130px;
+      padding-top: 50px;
+    }
+    img {
+      width: 80%;
+      height: auto;
+      transform: translateY(10%);
+      @media (max-width: 768px) {
+        // transform: translateY(60%);
+      }
+    }
+  }
+  &-title {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 32px;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &-wave {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+  }
+}

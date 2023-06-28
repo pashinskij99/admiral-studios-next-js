@@ -1,0 +1,22 @@
+.sites-list {
+  padding: 150px 0 100px;
+  position: relative;
+  // background: url("../../../../images/landing/sites-list/sites-yellow-line.svg");
+  // background-size: contain;
+  // background-repeat: no-repeat;
+  // background-position: -200px 0;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  &__yellow-line {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}

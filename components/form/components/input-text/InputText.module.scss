@@ -1,0 +1,75 @@
+@import 'styles/variables';
+
+.input-container {
+  position: relative;
+}
+
+.input-text {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 30px;
+  svg {
+    position: relative;
+    bottom: -55%;
+    left: 0;
+    height: 100%;
+    width: 120vw;
+    margin-bottom: 24px;
+    transform: translateX(-10%);
+    animation: pathAn 1s infinite linear;
+    path {
+      transition: 0.2s;
+      transform-origin: 50% 100%;
+      transform: scaleY(0.5);
+    }
+  }
+  input {
+    width: 100%;
+    &::placeholder {
+      color: $black;
+    }
+    &:focus + svg path {
+      d: path(
+        'M 0.27 13.2 c 3.5 1.66 12 4.29 18 1.5 c 6 -2.79 18 -14 31 -14 c 13 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 h 0.09 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 14 38.5 14 c 16 0 22.5 -14 38.5 -14 c 16 0 22.5 12 27 12'
+      );
+      stroke: $blue;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 30px;
+    color: $red;
+  }
+
+  &--light {
+    input {
+      background-color: $blue;
+      color: $white;
+
+      &::placeholder {
+        color: white;
+      }
+
+      &:focus + svg path {
+        stroke: $yellow;
+      }
+    }
+
+    svg {
+      path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+@keyframes pathAn {
+  0% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(-21.1%);
+  }
+}

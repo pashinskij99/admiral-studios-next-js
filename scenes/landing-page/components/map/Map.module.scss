@@ -1,0 +1,28 @@
+.map-block {
+  &__title {
+    width: 80%;
+    margin: 0 auto 24px;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 567px) {
+      margin-bottom: 0;
+      transform: translateY(-28px);
+    }
+  }
+
+  &__subtitle {
+    width: 70%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    @media (max-width: 567px) {
+      margin-top: -10px;
+    }
+  }
+}

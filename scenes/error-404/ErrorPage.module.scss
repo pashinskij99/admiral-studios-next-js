@@ -1,0 +1,80 @@
+.error404 {
+  height: calc(100vh - 90px);
+  overflow: hidden;
+
+  @media (min-width: 1601px) {
+    height: calc(100vh - 72px);
+  }
+
+  &__text {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+
+    h1 {
+      font-size: 284px;
+      line-height: 300px;
+      text-align: center;
+
+      @media (max-width: 1100px) {
+        font-size: 142px;
+        line-height: 204px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 91px;
+        line-height: 104px;
+      }
+
+      @media (max-width: 567px) {
+        font-size: 64px;
+        line-height: 74px;
+      }
+    }
+
+    p {
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+
+      @media (max-width: 567px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__wave {
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+  }
+
+  &__ship,
+  &__lighthouse {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__ship {
+    bottom: 82px;
+    left: 45%;
+    @media (max-width: 1100px) {
+      left: 70%;
+    }
+
+    @media (max-width: 768px) {
+      left: 45%;
+    }
+  }
+
+  &__lighthouse {
+    bottom: 65px;
+    left: -0.5%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

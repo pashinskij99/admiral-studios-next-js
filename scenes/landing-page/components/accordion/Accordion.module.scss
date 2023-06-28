@@ -1,0 +1,130 @@
+@import 'styles/variables';
+
+.accordion {
+  display: flex;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  &-title {
+    white-space: nowrap;
+    margin-bottom: 32px;
+    @media (max-width: 1000px) {
+      margin: 20px 0;
+    }
+  }
+  &-item {
+    position: relative;
+    width: 16.7vw;
+    padding: 6vw 0 5vw 7vw;
+    overflow: hidden;
+    transition: width 0.25s;
+    box-sizing: border-box;
+    @media (max-width: 1000px) {
+      width: 100%;
+      padding: 0 20px;
+      transition: none;
+    }
+    @media (max-width: 567px) {
+      padding: 0;
+    }
+    &-container {
+      @media (max-width: 567px) {
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+    }
+    &-default {
+      width: 40vw;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+    &-content {
+      opacity: 0;
+      transition: opacity 0.25s;
+      @media (max-width: 1000px) {
+        max-height: 0;
+        transition: 0.3s linear;
+      }
+    }
+    &-default &-content {
+      opacity: 1;
+      @media (max-width: 1000px) {
+        max-height: 300px;
+      }
+    }
+    p {
+      width: 21vw;
+      margin-bottom: 46px;
+      @media (max-width: 1000px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 50px;
+      width: 21vw;
+      z-index: 10;
+      @media (max-width: 1000px) {
+        position: relative;
+        width: 100%;
+        bottom: auto;
+        margin-bottom: 30px;
+      }
+      @media (max-width: 567px) {
+        margin-bottom: 20px;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+  &:hover &-item {
+    width: 16.7vw;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  &:hover &-item:hover {
+    width: 40vw;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+  &:hover &-item-content {
+    opacity: 0;
+    @media (max-width: 1000px) {
+      max-height: 0;
+    }
+  }
+  &:hover &-item:hover &-item-content {
+    opacity: 1;
+    display: block;
+    @media (max-width: 1000px) {
+      max-height: 300px;
+    }
+  }
+}
+
+.accordion {
+  &-item {
+    &:nth-child(1) {
+      background-color: rgba($blue, 1);
+    }
+    &:nth-child(2) {
+      background-color: rgba($blue, 0.85);
+    }
+    &:nth-child(3) {
+      background-color: rgba($blue, 0.75);
+    }
+    &:nth-child(4) {
+      background-color: rgba($blue, 0.65);
+    }
+    &:nth-child(5) {
+      background-color: rgba($blue, 0.45);
+    }
+  }
+}

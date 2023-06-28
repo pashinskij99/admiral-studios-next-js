@@ -1,0 +1,38 @@
+@import "styles/variables";
+
+.button {
+  position: relative;
+  background-color: $yellow;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  color: $dark-blue;
+  padding: 16px 49px;
+  height: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  @media (max-width: 1100px) {
+    padding: 14px 40px;
+  }
+  @media (max-width: 768px) {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+  @media (max-width: 567px) {
+    padding: 8px 30px;
+  }
+  &-wave {
+    position: absolute;
+    width: 100%;
+    bottom: -16px;
+    left: 0;
+    transition: 0.5s ease-out;
+    pointer-events: none;
+    transform: translateY(25px);
+    opacity: 0.5;
+  }
+  &:hover &-wave {
+    transform: translateY(0);
+  }
+}

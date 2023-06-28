@@ -1,0 +1,40 @@
+@import "styles/variables";
+
+.thank {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px);
+  @media (min-width: 1601px) {
+    height: calc(100vh - 72px);
+  }
+
+  &-wave {
+    width: 100%;
+    position: relative;
+    top: 10px;
+  }
+
+  &-main {
+    background-color: $blue;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 3;
+
+    &__container {
+      position: relative;
+      top: 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__text {
+      text-align: center;
+      max-width: 615px;
+      letter-spacing: -0.03em;
+      margin-bottom: 64px;
+    }
+  }
+}

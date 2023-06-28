@@ -1,0 +1,8 @@
+# Canonical https/www
+<IfModule mod_rewrite.c>
+	RewriteCond %{HTTP_HOST} ^https://stayua.com/ [NC]
+	RewriteRule (.*) https://www.stayua.com/ [L,R=301]
+
+    RewriteCond %{HTTP_HOST} ^https://stayua.com/$1 [NC]
+	RewriteRule (.*) https://www.stayua.com/$1 [L,R=301]
+</IfModule>

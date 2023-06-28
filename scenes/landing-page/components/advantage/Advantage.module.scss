@@ -1,0 +1,19 @@
+@import 'styles/variables';
+
+.advantage{
+  padding: 150px 0 300px;
+  @media (max-width: 1100px) {
+    padding: 120px 0 250px;
+  }
+  @media (max-width: 768px) {
+    padding: 80px 0 120px;
+  }
+  @media (max-width: 567px) {
+    padding: 50px 0 80px;
+  }
+  &-text{
+    color: white;
+    opacity: 0.35;
+    text-shadow: -1px -1px 0 $black-blue, 1px -1px 0 $black-blue, -1px 1px 0 $black-blue, 1px 1px 0 $black-blue
+  }
+}
