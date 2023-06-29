@@ -19,7 +19,7 @@ const LandingPage = () => {
       <SitesList />
       <Accordion />
       <AboutUs />
-      <OurServices />
+      {/*<OurServices />*/}
       <WeCan />
     </div>
   )

@@ -14,32 +14,32 @@ const weCanData = [
   {
     title: 'Design',
     description: [
-      'Our professional team of designers will take care of Your website’s user experience!',
-      'If You have any edits on our work during the process - no problem, we will try our best to fulfill Your desires!',
+      'Tap into our creative web design services for a stunning and user-friendly website.',
+      'Our dedicated team is all ears for your ideas and edits, offering affordable web design services that are tailored to your needs.',
     ],
     buttonText: 'Contact Us',
   },
   {
-    title: 'Development',
+    title: 'Web Development',
     description: [
-      'What websites need the most? Traffic! And high-loading speed without bugs is Your guarantee in this case',
-      'Our professional team of full-stack developers can create magnificent, fast-loading websites in a matter of days!',
+      'Leverage our full-stack web development services to build a fast and bug-free website that’s primed for traffic.',
+      'With our affordable web development services, our adept team can craft a high-performance site efficiently and effectively.',
     ],
     buttonText: 'Apply',
   },
   {
     title: 'Seo',
     description: [
-      'The best website is the SEO-optimised website! Who doesn’t want to bring clients directly from the browser almost for Free?',
-      'Just a couple of tweaks on Your website - and Your traffic can blow up 50%!',
+      'Elevate your website\'s performance with our top-notch SEO services, designed to drive organic traffic directly to your doorstep.',
+      'Through comprehensive SEO solutions, we implement powerful strategies that can substantially increase your website\'s traffic and visibility.',
     ],
     buttonText: 'Boost SEO',
   },
   {
     title: 'Hosting',
     description: [
-      'Tired of waiting for Your website to load? Switch to our hosting, and let us take care of loading speed for Your website!',
-      'The best part of all of this - if You choose our hosting, You don’t need to worry about managing it! We do all the needed work for Free!',
+      'Experience seamless website performance with our secure and fast web hosting services, ensuring your visitors don\'t have to wait.',
+      'Our high-performance web hosting not only guarantees speed but also comes with hassle-free management, leaving you with more time to focus on your business.',
     ],
     buttonText: 'Host my website',
   },
@@ -91,7 +91,7 @@ const WeCan = () => {
         alt='Yellow decoration line'
       />
       <div className='container'>
-        <h6 className='text-3 text-weight-bold text-color-black'>We can help you with</h6>
+        <h6 className='text-3 text-weight-bold text-color-black'>Explore Our Diverse Range of Tailored Web Solutions</h6>
         <div className={styles['we-can-content']}>
           <ul className={styles['we-can-content-list']}>
             {data.map((item, index) => (

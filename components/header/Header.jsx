@@ -43,11 +43,7 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
               alt='Admiral Studios logo'
             />
             <span
-              className={`${
-                styles['header-logo-text']
-              } text-1 text-weight-bold ${
-                isWhite ? 'text-color-black-blue' : 'text-color-white'
-              }`}
+              className={`${styles['header-logo-text']} text-1 text-weight-bold ${isWhite ? 'text-color-black-blue' : 'text-color-white'}`}
             >
               {' '}
               Admiral Studios{' '}
@@ -55,18 +51,16 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
           </div>
         </Link>
         <div className={styles['header-wrapper']}>
-  
-            <Link href='/blog/page/1' className={`${ styles['header-blog-text']} ${isWhite ? 'link-underline-black' : '' } ${!isShowBlog ? 'link-underline-active' : ''} link-underline link-underline-blog ${ isWhite ? 'text-color-black' : 'text-color-white'}`}>
-              Blog
-            </Link>
-   
+          <Link href='/blog/page/1' className={`${styles['header-blog-text']} ${isWhite ? 'link-underline-black' : ''} ${!isShowBlog ? 'link-underline-active' : ''} link-underline link-underline-blog ${isWhite ? 'text-color-black' : 'text-color-white'}`}>
+            Blog
+          </Link>
           {isShowContactUs && (
             <Link href='/contact'>
               <Button>Contact Us</Button>
             </Link>
           )}
         </div>
-       
+
       </nav>
     </header>
   )

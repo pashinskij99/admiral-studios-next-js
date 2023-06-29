@@ -62,6 +62,8 @@ const sitesListData = [
 const SitesList = () => {
   return (
     <div className={styles['sites-list']}>
+      <h2 className={'title-3 text-weight-bold text-color-black text-center'}>Showcasing Our Professional Web Solutions in Action</h2>
+
       <Image
         className={styles['sites-list__yellow-line']}
         src={yellowLine}

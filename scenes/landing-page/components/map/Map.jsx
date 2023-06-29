@@ -30,12 +30,10 @@ const Map = () => {
     <div className='container'>
       <h2
         className={`${styles['map-block__title']} title-2 text-weight-bold text-color-black text-center`}>
-        At Admiral Studios, we&apos;re proud to serve clients from around the globe.
+          Partner with a Full-Service Web Agency to Elevate Your Global Online Presence.
       </h2>
       <p className={`${styles['map-block__subtitle']} text-2 text-center text-color-black`}>
-        Whether You&apos;re located in North America, Europe, Asia, or beyond, our team is ready to
-        create custom web solutions that exceed Your expectations. Let&apos;s work together to take
-        Your online presence to new heights, no matter where You&apos;re based!
+        At Admiral Studios, we specialize in empowering businesses worldwide with our full-service web agency expertise. Whether you&apos;re in North America, Europe, Asia, or anywhere else, our adept team crafts bespoke web solutions to surpass your aspirations. Let&apos;s join forces and catapult your online presence to unprecedented heights, making your business thrive globally.
       </p>
       <MapChart setPercentWork={setPercentWork} setTooltipContent={setContent} />
       {isMounted && (

@@ -5,10 +5,10 @@ import styles from './Accordion.module.scss'
 
 const accordionData = [
   {
-    title: 'Design',
+    title: <>Cutting-Edge <br/> Technology</>,
     content: [
-      'Every website starts from design. If You already have a design - that’s good, we can start working right away!',
-      'If You don’t - that’s not a problem, we have our design team to help You with that!',
+      'At Admiral Studios, an expert web development company, we embrace the latest and most advanced technologies.',
+      'Our team ensures that your website stays ahead of the curve, giving you a competitive edge.',
     ],
     button: {
       name: 'Contact Us',
@@ -16,46 +16,46 @@ const accordionData = [
     },
   },
   {
-    title: 'Front-end',
+    title: <>Personalized <br/> Solutions</> ,
     content: [
-      'This may be the most crucial step - bringing Your design to life.',
-      'We can guarantee quality and high-performance using the newest technologies!',
+      'We understand that each business is unique.',
+      'Our tailored web services for businesses are designed to align with your specific goals and objectives, ensuring that your online presence is impactful and effective.',
     ],
     button: {
-      name: 'Apply',
+      name: 'Reach Out to Us',
       link: '/contact',
     },
   },
   {
-    title: 'Back-end',
+    title: <>Dedicated <br/> Support</>,
     content: [
-      'Bringing Your website to CMS is also very important. You can choose any CMS You are familiar with - it’s our duty to follow Your interests.',
-      'But, we created a next-generation platform with the newest technologies that exceed all expectations!',
+      'Our commitment to your success doesn’t end with the launch of your website.',
+      'Admiral Studios provides ongoing support and assistance to ensure your site performs optimally.',
     ],
     button: {
-      name: 'Contact Us',
+      name: 'Get in Touch',
       link: '/contact',
     },
   },
   {
-    title: 'Final Testing',
+    title: 'Robust Security',
     content: [
-      'Before going live, every website needs to runned by a couple of tests. First of all: loading speed, functionality and SEO-compatibility.',
-      'After this we always give You an opportunity to work with it - create a couple of pages, write a couple of texts.',
+      'Security is our priority.',
+      'We at Admiral Studios are dedicated to ensuring that your website is protected against threats and vulnerabilities, keeping your data and your customer’s information safe.',
     ],
     button: {
-      name: 'Start testing',
+      name: 'Connect with Us',
       link: '/contact',
     },
   },
   {
-    title: 'Hosting',
+    title: 'Scalable Growth',
     content: [
-      'The final part - hosting. Server response time is key to high-loading speed of Your website. Just imagine getting the first data from the server in 5 seconds!',
-      'Every client will just quit such a website - people don’t like to wait nowadays. We can assure You that after choosing our hosting You will never face such a problem!',
+      'With our forward-thinking approach, Admiral Studios ensures your website can grow alongside your business.',
+      'Our scalable solutions adapt to your evolving needs and aspirations.',
     ],
     button: {
-      name: 'Host my website',
+      name: 'Contact Us Now',
       link: '/contact',
     },
   },
@@ -63,32 +63,35 @@ const accordionData = [
 
 const Accordion = () => {
   return (
-    <div className={styles.accordion}>
-      {accordionData.map((item, index) => (
-        <div
-          key={index}
-          className={`${styles['accordion-item']} ${
-            index === 0 && styles['accordion-item-default']
-          }`}>
-          <div className={styles['accordion-item-container']}>
-            <h2
-              className={`${styles['accordion-title']} title-2 text-weight-bold text-color-white`}>
-              {item.title}
-            </h2>
-            <div className={`${styles['accordion-item-content']}`}>
-              {item.content.map((text, index) => (
-                <p className='text-2 text-weight-regular text-color-white' key={index}>
-                  {text}
-                </p>
-              ))}
-              <Link href={item.button.link}>
-                <Button>{item.button.name}</Button>
-              </Link>
-            </div>
-          </div>
+      <div className={styles.sectionWrapper}>
+        <h2 className='title-3 text-weight-bold text-color-black text-center'>Why Choosing Admiral Studios for Your Web Success?</h2>
+        <div className={styles.accordion}>
+          {accordionData.map((item, index) => (
+              <div
+                  key={index}
+                  className={`${styles['accordion-item']} ${
+                      index === 0 && styles['accordion-item-default']
+                  }`}>
+                <div className={styles['accordion-item-container']}>
+                  <h2
+                      className={`${styles['accordion-title']} title-2 text-weight-bold text-color-white`}>
+                    {item.title}
+                  </h2>
+                  <div className={`${styles['accordion-item-content']}`}>
+                    {item.content.map((text, index) => (
+                        <p className='text-2 text-weight-regular text-color-white' key={index}>
+                          {text}
+                        </p>
+                    ))}
+                    <Link href={item.button.link}>
+                      <Button>{item.button.name}</Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
   )
 }
 

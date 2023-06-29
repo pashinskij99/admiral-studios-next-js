@@ -169,6 +169,12 @@
     }
   }
 
+  .blog-page-related-post {
+    img {
+      max-height: 250px;
+    }
+  }
+
   &-related-title {
     text-align: center;
     font-weight: 600;

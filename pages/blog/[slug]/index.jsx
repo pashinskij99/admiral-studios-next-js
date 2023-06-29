@@ -11,7 +11,7 @@ import Post from '../../../scenes/blogs-page/components/post/Post'
 import Link from 'next/link'
 
 const BlogPage = ({ postData, related }) => {
-  console.log(related)
+
   return (
     <Wrapper
       isHeaderWhite={false}
@@ -61,18 +61,21 @@ const BlogPage = ({ postData, related }) => {
 
         {related.length ? (
           <div className='container'>
-            <h2 className={styles['blog-page-related-title']}>Related posts</h2>
+            <h2 className={styles['blog-page-related-title']}>Related articles</h2>
             <div className={styles['blog-page-related-wrapper']}>
               {related.map(({ slug, _publishedAt, category, coverImage, title }) => (
                 <Link key={slug} href={`/blog/${slug}`}>
-                  <Post
-                    key={slug}
-                    className={`post ${styles['blog-page-related-post']}`}
-                    category={category.name}
-                    img={coverImage.responsiveImage}
-                    publishedAt={_publishedAt}
-                    excerpt={title}
-                  />
+                  <div className={styles.relatedPostWrapper}>
+                    <Post
+                      key={slug}
+                      className={`post ${styles['blog-page-related-post']}`}
+                      category={category.name}
+                      img={coverImage.responsiveImage}
+                      publishedAt={_publishedAt}
+                      excerpt={title}
+                    />
+                  </div>
+
                 </Link>
               ))}
             </div>
@@ -144,7 +147,7 @@ query MyQuerry($slug: String) {
         __typename
         ... on ImageBlockRecord {
           id
-          image { 
+          image {
           	responsiveImage {
               width
               webpSrcSet

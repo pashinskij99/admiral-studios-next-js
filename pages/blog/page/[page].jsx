@@ -4,6 +4,7 @@ import BlogsPage from '../../../scenes/blogs-page/BlogsPage'
 
 import { request } from '../../../services/datocms'
 import { useRouter } from 'next/router'
+import { config } from '../../../configs'
 
 const Blog = ({ page }) => {
   const { push } = useRouter()
@@ -12,21 +13,22 @@ const Blog = ({ page }) => {
   const [allCount, setAllCount] = useState(0)
 
   const onChangePage = (page) => {
-    push(`/blog/page/${page}`)
+    push(
+      `/blog/page/${page}`,
+      undefined,
+      { scroll: false })
   }
 
   useEffect(() => {
     const fetchPosts = async () => {
       const data = await request({
         query: HOMEPAGE_QUERY,
-        variables: { first: 12, skip: (+page - 1) * 12 },
+        variables: { first: config.articleCount, skip: (+page - 1) * config.articleCount },
       })
 
       setPosts(data.allPosts)
       setAllCount(data._allPostsMeta.count)
     }
-
-    window.scrollTo({ top: 0 })
 
     fetchPosts()
   }, [page])
@@ -49,7 +51,7 @@ const Blog = ({ page }) => {
           handlePage={onChangePage}
           page={+page || 0}
           total={allCount}
-          pageSize={12}
+          pageSize={config.articleCount}
         />
       </Wrapper>
     </>

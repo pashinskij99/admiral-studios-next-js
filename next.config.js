@@ -5,15 +5,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/blog/page/1',
-        destination: '/blog',
-        permanent: true,
-      }
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/blog/page/1',
+  //       destination: '/blog',
+  //       permanent: true,
+  //     }
+  //   ]
+  // },
   env: {
     NEXT_DATOCMS_API_TOKEN: process.env.NEXT_DATOCMS_API_TOKEN,
   },

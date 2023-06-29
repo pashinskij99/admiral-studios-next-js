@@ -22,8 +22,12 @@ const AboutUs = () => {
             <p className='text-3 text-weight-extra_bold text-color-black'>09.01.2022</p>
           </div>
           <div className={styles['about-us-content-text']}>
-            <p className='text-1 text-weight-extra_bold text-color-black'>We are a team that can do any job related to Your website! Design, development, hosting, SEO, after-completion maintenance and so much more! Make sure to tell us what You need!</p>
-            <p className='text-1 text-weight-extra_bold text-color-black'>If You want Your personal website to be made - You are at the right place. Everything from design and front-end to complicated structure of back-end. We designed and released every type of website You can think of - eCommerce, Business, Blog, Entertainment, Nonprofit, Brochure, Media and Educational.</p>
+            <p className='text-1 text-weight-extra_bold text-color-black'>
+              At Admiral Studios, we go beyond the ordinary to provide comprehensive solutions for your website. Our custom website development services are carefully crafted to align with your unique goals and vision. Our cutting-edge web design ensures an engaging and seamless user experience that leaves a lasting impression. In a world where standing out is vital, we boost your website&apos;s visibility with meticulously planned SEO strategies. We also offer reliable hosting to ensure that your site is secure and performs at its peak, along with dedicated maintenance services to keep it running smoothly.
+            </p>
+            <p className='text-1 text-weight-extra_bold text-color-black'>
+              Whether you&apos;re creating a personal website or diving into a complex business platform, Admiral Studios has a proven track record in designing and releasing a diverse range of websites, including eCommerce, business, blogs, entertainment, nonprofits, brochure, media, and educational platforms. Embrace the excellence and innovation of Admiral Studios to give your online presence the edge it deserves.
+            </p>
           </div>
         </div>
       </div>
