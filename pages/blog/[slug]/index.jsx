@@ -11,7 +11,6 @@ import Post from '../../../scenes/blogs-page/components/post/Post'
 import Link from 'next/link'
 
 const BlogPage = ({ postData, related }) => {
-
   return (
     <Wrapper
       isHeaderWhite={false}

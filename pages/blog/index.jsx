@@ -5,7 +5,7 @@ import BlogsPage from '../../scenes/blogs-page/BlogsPage'
 import { request } from '../../services/datocms'
 import { config } from '../../configs'
 
-const BlogIndex = ({ page }) => {
+const BlogIndex = () => {
   const blogWrapperRef = useRef(null)
   const [posts, setPosts] = useState([])
   const [allCount, setAllCount] = useState(0)
@@ -16,7 +16,7 @@ const BlogIndex = ({ page }) => {
         query: HOMEPAGE_QUERY,
         variables: {
           first: config.articleCount,
-          skip: (+page - 1) * config.articleCount,
+          skip: (1 - 1) * config.articleCount,
         },
       })
 
@@ -25,7 +25,7 @@ const BlogIndex = ({ page }) => {
     }
 
     fetchPosts()
-  }, [page])
+  }, [])
 
   return (
     <>
@@ -36,7 +36,7 @@ const BlogIndex = ({ page }) => {
         textColor='white'
         bgColor='blue'
         title={'Digital Marketing Insights and Tips | Admiral Studio\'s Blog'}
-        canonical={`https://admiral-studios.com/blog/page/${page}/`}
+        canonical={'https://admiral-studios.com/blog/page/1/'}
         description={
           'Boost your online presence with Admiral Studio\'s blog. The latest digital marketing strategies, tips, and trends are just one click away!'
         }
@@ -44,7 +44,7 @@ const BlogIndex = ({ page }) => {
         <BlogsPage
           blogWrapperRef={blogWrapperRef}
           posts={posts}
-          page={+page || 0}
+          page={1 || 0}
           total={allCount}
           pageSize={config.articleCount}
         />
@@ -84,13 +84,5 @@ const HOMEPAGE_QUERY = `query MyQuerry ($first: IntType = 10, $skip: IntType = 0
     count
   }
 }`
-
-export async function getServerSideProps() {
-  return {
-    props: {
-      page: 1,
-    },
-  }
-}
 
 export default BlogIndex
