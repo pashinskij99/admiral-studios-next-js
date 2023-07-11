@@ -4,7 +4,7 @@
   gap: 30px;
 
   & p,
-  h2 {
+  h3, h2 {
     font-weight: 800;
     max-width: 368px;
   }
@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     & p,
+    h3,
     h2 {
       color: #fff;
       font-size: 14px;

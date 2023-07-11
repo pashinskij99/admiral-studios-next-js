@@ -51,7 +51,7 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
           </div>
         </Link>
         <div className={styles['header-wrapper']}>
-          <Link href='/blog/page/1' className={`${styles['header-blog-text']} ${isWhite ? 'link-underline-black' : ''} ${!isShowBlog ? 'link-underline-active' : ''} link-underline link-underline-blog ${isWhite ? 'text-color-black' : 'text-color-white'}`}>
+          <Link href='/blog' className={`${styles['header-blog-text']} ${isWhite ? 'link-underline-black' : ''} ${!isShowBlog ? 'link-underline-active' : ''} link-underline link-underline-blog ${isWhite ? 'text-color-black' : 'text-color-white'}`}>
             Blog
           </Link>
           {isShowContactUs && (

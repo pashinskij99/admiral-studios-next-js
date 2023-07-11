@@ -1,3 +1,3 @@
 export const config = {
-    articleCount: 2,
+  articleCount: 3,
 }

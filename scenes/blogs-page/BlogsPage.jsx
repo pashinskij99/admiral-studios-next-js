@@ -4,10 +4,11 @@ import styles from './BlogsPage.module.scss'
 import Link from 'next/link'
 import CustomPagination from '../../components/pagination/Pagination'
 
-const BlogsPage = ({ posts, handlePage, page, total, pageSize }) => {
+const BlogsPage = ({ posts, page, total, pageSize, }) => {
   return (
     <div className={styles['blogs-page']}>
       <div className={styles['blogs-page-heading']}>
+        <div id='blogs-page-wrapper' className={styles['blogs-page-heading-anchor-line']} />
         <h1>Digital Marketing Insights: Tips, Tricks & Strategies for Success</h1>
       </div>
 
@@ -25,7 +26,7 @@ const BlogsPage = ({ posts, handlePage, page, total, pageSize }) => {
         ))}
       </div>
 
-      <CustomPagination handlePage={handlePage} page={page} total={total} pageSize={pageSize} />
+      <CustomPagination page={page} total={total} pageSize={pageSize} />
     </div>
   )
 }

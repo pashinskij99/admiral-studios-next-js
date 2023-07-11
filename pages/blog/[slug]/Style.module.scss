@@ -176,14 +176,19 @@
   }
 
   &-related-title {
-    text-align: center;
+    text-align: start;
     font-weight: 600;
     margin-top: 148px;
+
+    @media (max-width: 636px) {
+      text-align: center;
+    }
   }
 
   &-related-post {
     p,
-    h2 {
+    h2,
+    h3 {
       color: #161616 !important;
     }
   }

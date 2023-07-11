@@ -14,7 +14,6 @@ const Wrapper = ({
   canonical,
   description,
 }) => {
-  console.log(canonical)
   return (
     <>
       <MetaTags

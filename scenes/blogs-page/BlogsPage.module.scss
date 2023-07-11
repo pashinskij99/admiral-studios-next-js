@@ -1,7 +1,22 @@
 .blogs-page {
-  padding: 0 64px 334px 64px;
+  padding: 50px 64px 334px 64px;
   background-color: #006cff;
   position: relative;
+
+  .blogs-page-heading {
+    padding: 0;
+    position: relative;
+    .blogs-page-heading-anchor-line {
+      position: absolute;
+      background: transparent;
+      height: 0px;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+
   & p,
   & h1 {
     color: #fff;

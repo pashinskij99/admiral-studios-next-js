@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
 import { DOTS, usePagination } from './usePagination'
 import styles from './Pagination.module.scss'
+import Link from 'next/link'
 
-const CustomPagination = ({ handlePage, page, total, pageSize }) => {
+const CustomPagination = ({ page, total, pageSize }) => {
   const paginationRange = usePagination({
     currentPage: page,
     totalCount: total,
@@ -14,20 +14,18 @@ const CustomPagination = ({ handlePage, page, total, pageSize }) => {
     return null
   }
 
-  const onNext = () => {
-    handlePage(page + 1)
-  }
-
-  const onPrevious = () => {
-    handlePage(page - 1)
-  }
-
   let lastPage = paginationRange[paginationRange.length - 1]
   return (
     <ul className={styles['pagination']}>
-      <li onClick={onPrevious} className={page === 1 ? styles['events-none'] : ''}>
-        <div className={`${styles['prev']}`} />
-      </li>
+      <Link
+        className={page === 1 ? styles['events-none'] : ''}
+        href={page - 1 === 1 ? '/blog' : `/blog/page/${page - 1}`}>
+        <li
+          className={page === 1 ? styles['events-none'] : ''}
+        >
+          <div className={`${styles['prev']}`} />
+        </li>
+      </Link>
       {paginationRange.map((pageNumber) => {
         if (pageNumber === DOTS) {
           return (
@@ -38,17 +36,29 @@ const CustomPagination = ({ handlePage, page, total, pageSize }) => {
         }
 
         return (
-          <li
+          <Link
             key={pageNumber}
-            className={pageNumber === page ? styles['active'] : ''}
-            onClick={() => handlePage(pageNumber)}>
-            {pageNumber}
-          </li>
+            href={pageNumber === 1 ? '/blog' : `/blog/page/${pageNumber}`}
+            scroll={true}
+          >
+            <li
+              className={pageNumber === page ? styles['active'] : ''}
+            >
+              {pageNumber}
+            </li>
+          </Link>
+
         )
       })}
-      <li onClick={onNext} className={page === lastPage ? styles['events-none'] : ''}>
-        <div className={`${styles['next']}`} />
-      </li>
+      <Link
+        className={page === lastPage ? styles['events-none'] : ''}
+        href={`/blog/page/${page + 1}`}>
+        <li
+          className={page === lastPage ? styles['events-none'] : ''}
+        >
+          <div className={`${styles['next']}`} />
+        </li>
+      </Link>
     </ul>
   )
 }

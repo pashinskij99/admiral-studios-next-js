@@ -67,6 +67,7 @@ const BlogPage = ({ postData, related }) => {
                 <Link key={slug} href={`/blog/${slug}`}>
                   <div className={styles.relatedPostWrapper}>
                     <Post
+                      related={true}
                       key={slug}
                       className={`post ${styles['blog-page-related-post']}`}
                       category={category.name}

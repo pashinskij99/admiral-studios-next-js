@@ -1,12 +1,21 @@
 import React from 'react'
 import Image from 'next/image'
+// @ts-ignore
 import facebookIcon from '../../images/icons/facebook.svg'
+// @ts-ignore
 import facebookDarkIcon from '../../images/icons/facebookDark.svg'
+// @ts-ignore
 import linkedInIcon from '../../images/icons/linked-in.svg'
+// @ts-ignore
 import linkedInDarkIcon from '../../images/icons/linked-inDark.svg'
+// @ts-ignore
 import twitterIcon from '../../images/icons/twitter.svg'
+// @ts-ignore
 import twitterDarkIcon from '../../images/icons/twitterDark.svg'
+// @ts-ignore
 import instagramIcon from '../../images/icons/instagram.svg'
+// @ts-ignore
+import instagramDarkIcon from '../../images/icons/instagram-dark.svg'
 import Wave from '../wave/Wave'
 
 import styles from './Footer.module.scss'
@@ -63,12 +72,12 @@ const Footer = ({ isWhite = false }) => {
               Kyiv, Ukraine
             </p>
             <div className={styles['footer-bot-right-links']}>
-              <a target='_blank' href='https://www.facebook.com/Admiral.Studios/' rel='noreferrer'>
+              {/* <a target='_blank' href='https://www.facebook.com/Admiral.Studios/' rel='noreferrer'>
                 <Image
                   src={isWhite ? facebookDarkIcon : facebookIcon}
                   alt='Admiral Studios Facebook icon'
                 />
-              </a>
+              </a> */}
               <a
                 target='_blank'
                 href={`${
@@ -79,7 +88,7 @@ const Footer = ({ isWhite = false }) => {
                 className={styles['footer-inst']}
                 rel='noreferrer'>
                 <Image
-                  src={isWhite ? twitterDarkIcon : instagramIcon}
+                  src={isWhite ? instagramDarkIcon : instagramIcon}
                   alt='Admiral Studios Instagram icon'
                   width={24}
                   height={24}

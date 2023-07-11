@@ -5,7 +5,7 @@ import cn from 'classnames'
 import styles from './Post.module.scss'
 import { format } from 'date-fns'
 
-const Post = ({ img, category, publishedAt, excerpt, className }) => {
+const Post = ({ img, category, publishedAt, excerpt, className, related = false }) => {
   return (
     <div
       className={cn(styles['post'], {
@@ -16,7 +16,11 @@ const Post = ({ img, category, publishedAt, excerpt, className }) => {
         <p className={styles['post-heading-date']}>{format(new Date(publishedAt), 'dd.MM.yyyy')}</p>
       </div>
       <Image data={img} alt='Post Image' />
-      <h2 className={styles['post-body-text']}>{excerpt}</h2>
+      {
+        related
+          ? <h3 className={styles['post-body-text']}>{excerpt}</h3>
+          : <h2 className={styles['post-body-text']}>{excerpt}</h2>
+      }
     </div>
   )
 }

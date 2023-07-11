@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Wrapper } from '../../../components'
-import BlogsPage from '../../../scenes/blogs-page/BlogsPage'
+import { Wrapper } from '../../components'
+import BlogsPage from '../../scenes/blogs-page/BlogsPage'
 
-import { request } from '../../../services/datocms'
-import { config } from '../../../configs'
+import { request } from '../../services/datocms'
+import { config } from '../../configs'
 
-const Blog = ({ page }) => {
+const BlogIndex = ({ page }) => {
   const blogWrapperRef = useRef(null)
   const [posts, setPosts] = useState([])
   const [allCount, setAllCount] = useState(0)
@@ -85,12 +85,12 @@ const HOMEPAGE_QUERY = `query MyQuerry ($first: IntType = 10, $skip: IntType = 0
   }
 }`
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   return {
     props: {
-      page: ctx.query.page,
+      page: 1,
     },
   }
 }
 
-export default Blog
+export default BlogIndex
