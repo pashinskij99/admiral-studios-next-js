@@ -36,7 +36,7 @@ const BlogIndex = () => {
         textColor='white'
         bgColor='blue'
         title={'Digital Marketing Insights and Tips | Admiral Studio\'s Blog'}
-        canonical={'https://admiral-studios.com/blog/page/1/'}
+        canonical={'https://admiral-studios.com/blog'}
         description={
           'Boost your online presence with Admiral Studio\'s blog. The latest digital marketing strategies, tips, and trends are just one click away!'
         }

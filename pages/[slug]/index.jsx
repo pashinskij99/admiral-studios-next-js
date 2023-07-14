@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import { Image as DatoImage } from 'react-datocms/image'
 import { StructuredText } from 'react-datocms/structured-text'
 
-import { request } from '../../../services/datocms'
-import { Wrapper } from '../../../components'
+import { request } from '../../services/datocms'
+import { Wrapper } from '../../components'
 
 import styles from './Style.module.scss'
 import { format } from 'date-fns'
-import Post from '../../../scenes/blogs-page/components/post/Post'
+import Post from '../../scenes/blogs-page/components/post/Post'
 import Link from 'next/link'
 
 const BlogPage = ({ postData, related }) => {
@@ -18,7 +18,7 @@ const BlogPage = ({ postData, related }) => {
       textColor='white'
       bgColor='blue'
       title={postData?.seoSettings?.title}
-      canonical={`https://admiral-studios.com/blog/${postData.slug}`}
+      canonical={`https://admiral-studios.com/${postData.slug}`}
       description={postData?.seoSettings?.description}>
       <div className={styles['blog-page']}>
         <div className={styles['blog-page-heading']}>
@@ -101,7 +101,7 @@ export const getStaticPaths = async (context) => {
   })
 
   let paths = []
-  slugQuery.allPosts.map((p) => paths.push(`/blog/${p.slug}`))
+  slugQuery.allPosts.map((p) => paths.push(`/${p.slug}`))
 
   return {
     paths,

@@ -14,7 +14,7 @@ const BlogsPage = ({ posts, page, total, pageSize, }) => {
 
       <div className={styles['blogs-page-wrapper']}>
         {posts.map(({ slug, _publishedAt, category, coverImage, title }) => (
-          <Link key={slug} href={`/blog/${slug}`}>
+          <Link key={slug} href={`/${slug}`}>
             <Post
               className='post'
               category={category.name}

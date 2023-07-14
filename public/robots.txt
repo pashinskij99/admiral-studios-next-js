@@ -1,2 +1,3 @@
 User-agent: *
 Disallow:
+Sitemap: https://admiral-studios.com/sitemap.xml
