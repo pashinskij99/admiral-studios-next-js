@@ -44,11 +44,13 @@
     display: flex;
     align-items: center;
     height: 100%;
+    flex-direction: row;
     img {
       height: 40px;
       width: auto;
     }
     &-text {
+      display: inline-block;
       margin-left: 14px;
       @media (max-width: 567px) {
         display: none;

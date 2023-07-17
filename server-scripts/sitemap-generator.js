@@ -9,7 +9,7 @@ const ALL_POSTS_QUERY = `query MyQuery {
 
 ;(async () => {
   const { allPosts } = await request({ query: ALL_POSTS_QUERY })
-  const newSitemapBlogData = allPosts.map(({ slug }) => getUrl(`blog/${slug}`))
+  const newSitemapBlogData = allPosts.map(({ slug }) => getUrl(`${slug}`))
   const newSitemapPagesData = getStaticPath().map((name) => getUrl(name))
 
   const sitemapSubData = [
@@ -43,7 +43,7 @@ function getStaticPath() {
     .readdirSync('pages')
     .filter(
       (staticPage) =>
-        !['api', '_app.js', '_document.js', '404.jsx', 'thank.jsx'].includes(
+        !['api', '_app.js', '_document.js', '404.jsx', 'thank.jsx', '[slug]'].includes(
           staticPage
         )
     )

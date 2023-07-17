@@ -63,7 +63,7 @@ const BlogPage = ({ postData, related }) => {
             <h2 className={styles['blog-page-related-title']}>Related articles</h2>
             <div className={styles['blog-page-related-wrapper']}>
               {related.map(({ slug, _publishedAt, category, coverImage, title }) => (
-                <Link key={slug} href={`/blog/${slug}`}>
+                <Link key={slug} href={`/${slug}`}>
                   <div className={styles.relatedPostWrapper}>
                     <Post
                       related={true}

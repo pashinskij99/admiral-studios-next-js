@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
   // Add URLs for each blog to the sitemap
   allPosts.forEach((post) => {
-    sitemapStream.write({ url: `/blog/${post.slug}`, changefreq: 'weekly', priority: 0.7 })
+    sitemapStream.write({ url: `/${post.slug}`, changefreq: 'daily', priority: 0.7 })
   })
 
   // End the sitemap stream and convert it to a string
