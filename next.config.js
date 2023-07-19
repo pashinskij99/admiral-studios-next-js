@@ -2,6 +2,9 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    forceSwcTransforms: true,
+  },
   images: {
     unoptimized: true,
   },
@@ -20,10 +23,10 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     config.resolve.fallback = { fs: false }
 
-    if(isServer) require('./server-scripts/sitemap-generator')
+    if (isServer) require('./server-scripts/sitemap-generator')
 
     return config
-  }
+  },
 }
 
 module.exports = nextConfig

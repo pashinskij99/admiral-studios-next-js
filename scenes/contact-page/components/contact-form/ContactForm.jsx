@@ -10,7 +10,7 @@ import { validEmail } from '../../../../utils/regex'
 
 import styles from './ContactForm.module.scss'
 import { useState } from 'react'
-import Loader from '../../../../components/loader/Loader'
+// import Loader from '../../../../components/loader/Loader'
 
 const checkboxValues = [
   'Branding',
@@ -43,17 +43,25 @@ const ContactForm = () => {
         setIsLoading(isPending)
       },
     }
-    sendContact(JSON.stringify({ ...data, budget: data.budget ? data.budget : '' }), callbacks)
+    sendContact(
+      JSON.stringify({ ...data, budget: data.budget ? data.budget : '' }),
+      callbacks
+    )
   }
 
   return (
     <div className={styles['contact-form']}>
       <div className='container'>
-        <h1 className='big-title-1 text-weight-extra_bold text-color-black'>Contact us</h1>
+        <h1 className='big-title-1 text-weight-extra_bold text-color-black'>
+          Contact us
+        </h1>
         <p className='headline-3 text-weight-extra_bold text-color-black'>
           Fill the form and we will be in touch shortly.
         </p>
-        <form onSubmit={handleSubmit(onSubmit)} className={styles['contact-form-form']}>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className={styles['contact-form-form']}
+        >
           <div className={styles['contact-form-form-block']}>
             <InputText
               register={register}
@@ -76,9 +84,15 @@ const ContactForm = () => {
               error={formState.errors.email}
             />
           </div>
-          <InputText register={register} placeholder={'Short description'} name={'description'} />
+          <InputText
+            register={register}
+            placeholder={'Short description'}
+            name={'description'}
+          />
           <div className={styles['contact-form-form-check']}>
-            <p className='headline-3 text-weight-extra_bold text-color-black'>I am interested in</p>
+            <p className='headline-3 text-weight-extra_bold text-color-black'>
+              I am interested in
+            </p>
             <div className={styles['contact-form-form-check-inputs']}>
               {checkboxValues.map((value) => (
                 <InputCheck
@@ -92,7 +106,9 @@ const ContactForm = () => {
             </div>
           </div>
           <div className={styles['contact-form-form-check']}>
-            <p className='headline-3 text-weight-extra_bold text-color-black'>Project Budget, $</p>
+            <p className='headline-3 text-weight-extra_bold text-color-black'>
+              Project Budget, $
+            </p>
             <div className={styles['contact-form-form-check-inputs']}>
               {radioValues.map((value) => (
                 <InputCheck
@@ -109,24 +125,32 @@ const ContactForm = () => {
           <Button isLoading={isLoading}>Send</Button>
         </form>
         <div>
-          <p className='headline-3 text-weight-bold text-color-black'>Contact Us</p>
+          <p className='headline-3 text-weight-bold text-color-black'>
+            Contact Us
+          </p>
           <a
             className={`${styles['contact-form-mail-bot']} title-1 text-weight-extra_bold text-color-black link-underline link-underline-black`}
-            href='mailto:admiralstudios777@gmail.com'>
+            href='mailto:admiralstudios777@gmail.com'
+          >
             using our email
           </a>
-          <p className={`${styles['contact-form-bottom-text']} text-2 text-color-black`}>
-            Contact Admiral Studios today and let us help You achieve Your online goals! Our expert
-            team of SEO, web design and development professionals is dedicated to creating
-            innovative and creative solutions tailored to Your unique needs. Whether You&rsquo;re
-            looking to build a new website, redesign an existing one, or need ongoing support and
-            maintenance, we&rsquo;re here to help.{' '}
+          <p
+            className={`${styles['contact-form-bottom-text']} text-2 text-color-black`}
+          >
+            Contact Admiral Studios today and let us help You achieve Your
+            online goals! Our expert team of SEO, web design and development
+            professionals is dedicated to creating innovative and creative
+            solutions tailored to Your unique needs. Whether You&rsquo;re
+            looking to build a new website, redesign an existing one, or need
+            ongoing support and maintenance, we&rsquo;re here to help.{' '}
           </p>
           <p className='text-2 text-color-black'>
-            We value open communication and collaboration, and we&rsquo;ll work with You every step
-            of the way to ensure Your project is a success. Fill out the form on this page to
-            request a consultation and take the first step towards building an exceptional website
-            for Your business. Let&rsquo;s work together to make Your online presence stand out!
+            We value open communication and collaboration, and we&rsquo;ll work
+            with You every step of the way to ensure Your project is a success.
+            Fill out the form on this page to request a consultation and take
+            the first step towards building an exceptional website for Your
+            business. Let&rsquo;s work together to make Your online presence
+            stand out!
           </p>
         </div>
       </div>

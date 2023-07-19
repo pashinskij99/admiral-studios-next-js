@@ -4,10 +4,10 @@ import { useForm } from 'react-hook-form'
 
 import { Button } from '../../../../../../components'
 import InputText from '../../../../../../components/form/components/input-text/InputText'
-import Loader from '../../../../../../components/loader/Loader'
+// import Loader from '../../../../../../components/loader/Loader'
 
 import { sendFreeAudit } from '../../../../../../services/FormService'
-import { validEmail, validUrl } from '../../../../../../utils/regex'
+import { validEmail } from '../../../../../../utils/regex'
 
 import styles from './FreeAuditForm.module.scss'
 
@@ -56,7 +56,12 @@ const FreeAuditForm = () => {
           error={formState.errors.email}
           isLight
         />
-        <InputText register={register} placeholder={'Message'} name={'description'} isLight />
+        <InputText
+          register={register}
+          placeholder={'Message'}
+          name={'description'}
+          isLight
+        />
         <Button isLoading={isLoading}>Send</Button>
       </form>
     </div>

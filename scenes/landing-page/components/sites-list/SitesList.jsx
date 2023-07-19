@@ -22,7 +22,7 @@ const sitesListData = [
     color: colors.blue,
     position: 'right',
     linkTitle: 'Game UA Website',
-    rel: false
+    rel: false,
   },
   {
     img: macbookPro16,
@@ -33,7 +33,7 @@ const sitesListData = [
     color: colors.black,
     position: 'left',
     linkTitle: 'Visit Website',
-    rel: true
+    rel: true,
   },
   {
     img: ipadMini,
@@ -44,7 +44,7 @@ const sitesListData = [
     color: colors.yellow,
     position: 'right',
     linkTitle: 'Visit Website',
-    rel: true
+    rel: true,
   },
   {
     img: ipadPro2020,
@@ -55,14 +55,16 @@ const sitesListData = [
     color: colors.blue,
     position: 'left',
     linkTitle: 'Visit Website',
-    rel: true
-  }
+    rel: true,
+  },
 ]
 
 const SitesList = () => {
   return (
     <div className={styles['sites-list']}>
-      <h2 className={'title-3 text-weight-bold text-color-black text-center'}>Showcasing Our Professional Web Solutions in Action</h2>
+      <h2 className={'title-3 text-weight-bold text-color-black text-center'}>
+        Showcasing Our Professional Web Solutions in Action
+      </h2>
 
       <Image
         className={styles['sites-list__yellow-line']}

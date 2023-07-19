@@ -1,8 +1,7 @@
-import React from 'react'
-import { Header, Wrapper } from '../components'
+import { Wrapper } from '../components'
 import { ContactPage } from '../scenes/contact-page'
-import Head from 'next/head'
-import HotjarScript from '../utils/hotjarScript'
+// import Head from 'next/head'
+// import HotjarScript from '../utils/hotjarScript'
 
 export default function Home() {
   return (
@@ -15,7 +14,9 @@ export default function Home() {
         isShowFooter={false}
         isShowContactUs={false}
         canonical='https://admiral-studios.com/contact/'
-        description={'Admiral Studios delivers innovative, creative, and professional SEO, website design and development services to help You achieve Your online goals.'}
+        description={
+          'Admiral Studios delivers innovative, creative, and professional SEO, website design and development services to help You achieve Your online goals.'
+        }
         bgColor='white'
       >
         <ContactPage />

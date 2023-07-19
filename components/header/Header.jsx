@@ -9,7 +9,6 @@ import logoAdmiralDark from '../../images/header/logo_dark.svg'
 
 import styles from './Header.module.scss'
 import { useEffect, useState } from 'react'
-import React from 'react'
 
 const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
   const [isScrolling, setIsScrolling] = useState(false)
@@ -31,9 +30,13 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
 
   return (
     <header
-      className={cn(styles.header, {
-        [styles['header--active']]: isScrolling,
-      }, `bg-color-${bgColor}`)}
+      className={cn(
+        styles.header,
+        {
+          [styles['header--active']]: isScrolling,
+        },
+        `bg-color-${bgColor}`
+      )}
     >
       <nav className={styles['header-nav']}>
         <Link href='/'>
@@ -43,7 +46,11 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
               alt='Admiral Studios logo'
             />
             <span
-              className={`${styles['header-logo-text']} text-1 text-weight-bold ${isWhite ? 'text-color-black-blue' : 'text-color-white'}`}
+              className={`${
+                styles['header-logo-text']
+              } text-1 text-weight-bold ${
+                isWhite ? 'text-color-black-blue' : 'text-color-white'
+              }`}
             >
               {' '}
               Admiral Studios{' '}
@@ -51,7 +58,16 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
           </div>
         </Link>
         <div className={styles['header-wrapper']}>
-          <Link href='/blog' className={`${styles['header-blog-text']} ${isWhite ? 'link-underline-black' : ''} ${!isShowBlog ? 'link-underline-active' : ''} link-underline link-underline-blog ${isWhite ? 'text-color-black' : 'text-color-white'}`}>
+          <Link
+            href='/blog'
+            className={`${styles['header-blog-text']} ${
+              isWhite ? 'link-underline-black' : ''
+            } ${
+              !isShowBlog ? 'link-underline-active' : ''
+            } link-underline link-underline-blog ${
+              isWhite ? 'text-color-black' : 'text-color-white'
+            }`}
+          >
             Blog
           </Link>
           {isShowContactUs && (
@@ -60,7 +76,6 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
             </Link>
           )}
         </div>
-
       </nav>
     </header>
   )

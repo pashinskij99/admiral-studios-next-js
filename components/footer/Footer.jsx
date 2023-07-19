@@ -1,17 +1,16 @@
-import React from 'react'
 import Image from 'next/image'
 // @ts-ignore
-import facebookIcon from '../../images/icons/facebook.svg'
+// import facebookIcon from '../../images/icons/facebook.svg'
 // @ts-ignore
-import facebookDarkIcon from '../../images/icons/facebookDark.svg'
+// import facebookDarkIcon from '../../images/icons/facebookDark.svg'
 // @ts-ignore
 import linkedInIcon from '../../images/icons/linked-in.svg'
 // @ts-ignore
 import linkedInDarkIcon from '../../images/icons/linked-inDark.svg'
 // @ts-ignore
-import twitterIcon from '../../images/icons/twitter.svg'
+// import twitterIcon from '../../images/icons/twitter.svg'
 // @ts-ignore
-import twitterDarkIcon from '../../images/icons/twitterDark.svg'
+// import twitterDarkIcon from '../../images/icons/twitterDark.svg'
 // @ts-ignore
 import instagramIcon from '../../images/icons/instagram.svg'
 // @ts-ignore
@@ -23,7 +22,11 @@ import Link from 'next/link'
 
 const Footer = ({ isWhite = false }) => {
   return (
-    <footer className={`${styles.footer} ${isWhite ? 'bg-color-white' : 'bg-color-blue'}`}>
+    <footer
+      className={`${styles.footer} ${
+        isWhite ? 'bg-color-white' : 'bg-color-blue'
+      }`}
+    >
       <div className={styles['footer-wave']}>
         <Wave
           fill={`${isWhite ? '#FFF' : '#006CFF'}`}
@@ -38,7 +41,8 @@ const Footer = ({ isWhite = false }) => {
         <p
           className={`${styles['footer-text']} text-1 text-weight-regular ${
             isWhite ? 'text-color-black' : 'text-color-white'
-          }`}>
+          }`}
+        >
           Let’s have a talk about your future
         </p>
         <Link
@@ -47,7 +51,8 @@ const Footer = ({ isWhite = false }) => {
           } link-underline big-title-1 text-weight-extra_bold ${
             isWhite ? 'text-color-black' : 'text-color-white'
           }`}
-          href='/contact'>
+          href='/contact'
+        >
           Let’s Chat
         </Link>
         <div className={styles['footer-bot']}>
@@ -58,7 +63,8 @@ const Footer = ({ isWhite = false }) => {
               } link-underline text-email text-2 text-weight-bold ${
                 isWhite ? 'text-color-black' : 'text-color-white'
               }`}
-              href='mailto:admiralstudios777@gmail.com'>
+              href='mailto:admiralstudios777@gmail.com'
+            >
               admiralstudios777@gmail.com
             </a>
           </div>
@@ -68,7 +74,8 @@ const Footer = ({ isWhite = false }) => {
                 isWhite ? 'link-underline-black' : ''
               } link-underline text-2 text-weight-bold ${
                 isWhite ? 'text-color-black' : 'text-color-white'
-              }`}>
+              }`}
+            >
               Kyiv, Ukraine
             </p>
             <div className={styles['footer-bot-right-links']}>
@@ -86,7 +93,8 @@ const Footer = ({ isWhite = false }) => {
                     : 'https://www.instagram.com/admiral_studios/'
                 }`}
                 className={styles['footer-inst']}
-                rel='noreferrer'>
+                rel='noreferrer'
+              >
                 <Image
                   src={isWhite ? instagramDarkIcon : instagramIcon}
                   alt='Admiral Studios Instagram icon'
@@ -97,7 +105,8 @@ const Footer = ({ isWhite = false }) => {
               <a
                 target='_blank'
                 href='https://www.linkedin.com/company/admiralstudios/'
-                rel='noreferrer'>
+                rel='noreferrer'
+              >
                 <Image
                   src={isWhite ? linkedInDarkIcon : linkedInIcon}
                   alt='Admiral Studios Linkedin icon'

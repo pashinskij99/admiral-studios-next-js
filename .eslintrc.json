@@ -8,6 +8,8 @@
     "indent": ["warn", 2],
     "object-curly-spacing": ["error", "always"],
     "react/jsx-no-target-blank": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "react/react-in-jsx-scope": "off",
+
   }
 }

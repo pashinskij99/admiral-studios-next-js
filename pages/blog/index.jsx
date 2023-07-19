@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Wrapper } from '../../components'
 import BlogsPage from '../../scenes/blogs-page/BlogsPage'
 
@@ -35,10 +35,10 @@ const BlogIndex = () => {
         isShowBlog={false}
         textColor='white'
         bgColor='blue'
-        title={'Digital Marketing Insights and Tips | Admiral Studio\'s Blog'}
+        title={"Digital Marketing Insights and Tips | Admiral Studio's Blog"}
         canonical={'https://admiral-studios.com/blog'}
         description={
-          'Boost your online presence with Admiral Studio\'s blog. The latest digital marketing strategies, tips, and trends are just one click away!'
+          "Boost your online presence with Admiral Studio's blog. The latest digital marketing strategies, tips, and trends are just one click away!"
         }
       >
         <BlogsPage

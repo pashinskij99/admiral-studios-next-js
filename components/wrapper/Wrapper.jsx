@@ -1,4 +1,3 @@
-import React from 'react'
 import { MetaTags, Footer, Toast, Header } from '../index'
 
 const Wrapper = ({

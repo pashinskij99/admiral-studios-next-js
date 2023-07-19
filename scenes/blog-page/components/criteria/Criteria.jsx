@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from './Criteria.module.scss'
 import pwaImage from '../../../../images/landing/our-blogs/pwa-framework.webp'
 import reactImage from '../../../../images/landing/our-blogs/react.webp'
@@ -12,7 +11,7 @@ const Criteria = () => {
         <div className={styles['criteria-critery-header']}>
           <h2>1. Progressive Web Apps (PWAs)</h2>
         </div>
-        <Image src={pwaImage} alt='PWA Image'/>
+        <Image src={pwaImage} alt='PWA Image' />
         <div className={styles['criteria-critery-sections']}>
           <div>
             <h3>What are PWAs?</h3>
@@ -96,7 +95,7 @@ const Criteria = () => {
             ways to build interactive user interfaces.
           </p>
         </div>
-        <Image src={reactImage} alt='ReactJS Image'/>
+        <Image src={reactImage} alt='ReactJS Image' />
         <div className={styles['criteria-critery-sections']}>
           <div>
             <h3>Why Choose React or Vue.js?</h3>
@@ -111,22 +110,24 @@ const Criteria = () => {
                 <tr>
                   <td>Popularity</td>
                   <td>
-                  React&apos;s robust ecosystem and flexibility make it a
-                  popular choice among developers.
+                    React&apos;s robust ecosystem and flexibility make it a
+                    popular choice among developers.
                   </td>
-                  <td>Vue.js is praised for its simplicity and easy learning curve.</td>
+                  <td>
+                    Vue.js is praised for its simplicity and easy learning
+                    curve.
+                  </td>
                 </tr>
                 <tr>
                   <td>Performance</td>
                   <td>
-                React offers high performance for complex applications.
+                    React offers high performance for complex applications.
                   </td>
                   <td>
-                  Vue.js provides fast rendering and a lightweight footprint.
+                    Vue.js provides fast rendering and a lightweight footprint.
                   </td>
-                </tr>  
+                </tr>
               </tbody>
-             
             </table>
             <p>
               Choosing the proper framework or library often depends on the
@@ -181,7 +182,7 @@ const Criteria = () => {
         <div className={styles['criteria-critery-header']}>
           <h2>5. Motion UI</h2>
         </div>
-        <Image src={motionUIImage} alt='Motion UI Image'/>
+        <Image src={motionUIImage} alt='Motion UI Image' />
         <div className={styles['criteria-critery-sections']}>
           <div>
             <h3>The Appeal of Motion UI</h3>

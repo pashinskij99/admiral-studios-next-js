@@ -1,11 +1,11 @@
 import {
   AboutUs,
   Accordion,
-  Advantage,
+  // Advantage,
   FreeAudit,
   HeroSection,
   Map,
-  OurServices,
+  // OurServices,
   SitesList,
   WeCan,
 } from './components'

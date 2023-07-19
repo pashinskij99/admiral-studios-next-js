@@ -1,9 +1,8 @@
-import React from 'react'
 import { LandingPage } from '../scenes/landing-page'
 import { Header, Wrapper } from '../components'
 import DonateBanner from '../components/donate-banner/DonateBanner'
-import Head from 'next/head'
-import HotjarScript from '../utils/hotjarScript'
+// import Head from 'next/head'
+// import HotjarScript from '../utils/hotjarScript'
 
 export default function Home() {
   return (
@@ -19,7 +18,8 @@ export default function Home() {
         description={
           'Admiral Studios delivers innovative, creative, and professional SEO, website design and development services to help You achieve Your online goals.'
         }
-        bgColor='blue'>
+        bgColor='blue'
+      >
         <LandingPage />
       </Wrapper>
       <DonateBanner />

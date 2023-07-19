@@ -1,15 +1,19 @@
-import React from 'react'
 import Post from './components/post/Post'
 import styles from './BlogsPage.module.scss'
 import Link from 'next/link'
 import CustomPagination from '../../components/pagination/Pagination'
 
-const BlogsPage = ({ posts, page, total, pageSize, }) => {
+const BlogsPage = ({ posts, page, total, pageSize }) => {
   return (
     <div className={styles['blogs-page']}>
       <div className={styles['blogs-page-heading']}>
-        <div id='blogs-page-wrapper' className={styles['blogs-page-heading-anchor-line']} />
-        <h1>Digital Marketing Insights: Tips, Tricks & Strategies for Success</h1>
+        <div
+          id='blogs-page-wrapper'
+          className={styles['blogs-page-heading-anchor-line']}
+        />
+        <h1>
+          Digital Marketing Insights: Tips, Tricks & Strategies for Success
+        </h1>
       </div>
 
       <div className={styles['blogs-page-wrapper']}>

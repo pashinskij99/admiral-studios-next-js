@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import { Image as DatoImage } from 'react-datocms/image'
 import { StructuredText } from 'react-datocms/structured-text'
 
