@@ -110,6 +110,8 @@ const Footer = ({ isWhite = false }) => {
                 <Image
                   src={isWhite ? linkedInDarkIcon : linkedInIcon}
                   alt='Admiral Studios Linkedin icon'
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>

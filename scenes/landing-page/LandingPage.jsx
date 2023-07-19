@@ -4,7 +4,7 @@ import {
   // Advantage,
   FreeAudit,
   HeroSection,
-  // Map,
+  Map,
   // OurServices,
   SitesList,
   WeCan,
@@ -19,7 +19,7 @@ const LandingPage = () => {
   return (
     <div>
       <HeroSection />
-      {/* <Map /> */}
+      <Map />
       <FreeAudit />
       <SitesList />
       <Accordion />

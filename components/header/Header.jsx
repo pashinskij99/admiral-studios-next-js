@@ -44,6 +44,8 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
             <Image
               src={isWhite ? logoAdmiralDark : logoAdmiral}
               alt='Admiral Studios logo'
+              width={88}
+              height={56}
             />
             <span
               className={`${

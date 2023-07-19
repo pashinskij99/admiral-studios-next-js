@@ -7,6 +7,7 @@ import { Button } from '../../../../components'
 import Wave from '../../../../components/wave/Wave'
 
 import heroBack from '../../../../images/landing/hero/hero-back-new.webp'
+import heroBackMobile from '../../../../images/landing/hero/hero-back-mobile.webp'
 
 import styles from './HeroSection.module.scss'
 
@@ -24,7 +25,10 @@ const HeroSection = () => {
           <Link href='/contact'>
             <Button>Contact Us</Button>
           </Link>
-          <Image src={heroBack} alt='Hero section background image' />
+          <picture className={styles.picture}>
+            <source media='(min-width:600px)' srcSet={heroBack.src} />
+            <Image src={heroBackMobile} alt='Hero section background image' />
+          </picture>
         </div>
       </div>
       <div className={styles['hero-wave']}>
