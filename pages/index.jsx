@@ -1,5 +1,5 @@
 import { LandingPage } from '../scenes/landing-page'
-// import { Header, Wrapper } from '../components'
+import { Header, Wrapper } from '../components'
 import DonateBanner from '../components/donate-banner/DonateBanner'
 // import Head from 'next/head'
 // import HotjarScript from '../utils/hotjarScript'
@@ -10,7 +10,7 @@ export default function Home() {
       {/* <Head>
         <HotjarScript />
       </Head> */}
-      {/* <Wrapper
+      <Wrapper
         isHeaderWhite={false}
         title={'SEO, Website Design and Development Services | Admiral Studios'}
         canonical='https://admiral-studios.com/'
@@ -19,9 +19,9 @@ export default function Home() {
           'Admiral Studios delivers innovative, creative, and professional SEO, website design and development services to help You achieve Your online goals.'
         }
         bgColor='blue'
-      > */}
-      <LandingPage />
-      {/* </Wrapper> */}
+      >
+        <LandingPage />
+      </Wrapper>
       <DonateBanner />
     </>
   )
