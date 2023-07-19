@@ -13,20 +13,23 @@ import { useEffect, useState } from 'react'
 const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
   const [isScrolling, setIsScrolling] = useState(false)
 
-  useEffect(() => {
-    let timer
-    window.addEventListener(
-      'scroll',
-      () => {
-        clearTimeout(timer)
-        setIsScrolling(true)
-        timer = setTimeout(() => {
-          setIsScrolling(false)
-        }, 150)
-      },
-      false
-    )
-  }, [])
+  let timer
+
+  // const handleScroll = () => {
+  //   clearTimeout(timer)
+  //   setIsScrolling(true)
+  //   timer = setTimeout(() => {
+  //     setIsScrolling(false)
+  //   }, 150)
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll, false)
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll, false)
+  //   }
+  // }, [])
 
   return (
     <header
