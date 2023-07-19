@@ -19,7 +19,8 @@ const BlogPage = ({ postData, related }) => {
       bgColor='blue'
       title={postData?.seoSettings?.title}
       canonical={`https://admiral-studios.com/${postData.slug}`}
-      description={postData?.seoSettings?.description}>
+      description={postData?.seoSettings?.description}
+    >
       <div className={styles['blog-page']}>
         <div className={styles['blog-page-heading']}>
           <DatoImage
@@ -32,12 +33,20 @@ const BlogPage = ({ postData, related }) => {
                 <p>{postData.category.name}</p>
               </div>
               <h1>{postData.title}</h1>
-              <p className={styles['blog-page-heading-info-main-text']}>{postData.excerpt}</p>
+              <p className={styles['blog-page-heading-info-main-text']}>
+                {postData.excerpt}
+              </p>
             </div>
             <div className={styles['blog-page-heading-info-data']}>
               <div className={styles['blog-page-heading-info-data-wrapper']}>
                 <p>{format(new Date(postData._publishedAt), 'dd.MM.yyyy')}</p>
-                <span className={styles['blog-page-heading-info-data-wrapper-slash']}>/</span>
+                <span
+                  className={
+                    styles['blog-page-heading-info-data-wrapper-slash']
+                  }
+                >
+                  /
+                </span>
                 <p>{postData.minutesRead} min. read</p>
               </div>
             </div>
@@ -60,24 +69,27 @@ const BlogPage = ({ postData, related }) => {
 
         {related.length ? (
           <div className='container'>
-            <h2 className={styles['blog-page-related-title']}>Related articles</h2>
+            <h2 className={styles['blog-page-related-title']}>
+              Related articles
+            </h2>
             <div className={styles['blog-page-related-wrapper']}>
-              {related.map(({ slug, _publishedAt, category, coverImage, title }) => (
-                <Link key={slug} href={`/${slug}`}>
-                  <div className={styles.relatedPostWrapper}>
-                    <Post
-                      related={true}
-                      key={slug}
-                      className={`post ${styles['blog-page-related-post']}`}
-                      category={category.name}
-                      img={coverImage.responsiveImage}
-                      publishedAt={_publishedAt}
-                      excerpt={title}
-                    />
-                  </div>
-
-                </Link>
-              ))}
+              {related.map(
+                ({ slug, _publishedAt, category, coverImage, title }) => (
+                  <Link key={slug} href={`/${slug}`}>
+                    <div className={styles.relatedPostWrapper}>
+                      <Post
+                        related={true}
+                        key={slug}
+                        className={`post ${styles['blog-page-related-post']}`}
+                        category={category.name}
+                        img={coverImage.responsiveImage}
+                        publishedAt={_publishedAt}
+                        excerpt={title}
+                      />
+                    </div>
+                  </Link>
+                )
+              )}
             </div>
           </div>
         ) : null}
@@ -206,22 +218,31 @@ const RELATED_ARTICLES_QUERY = `query MyQuerry($first: IntType = 5, $categoryId:
 }`
 
 export const getStaticProps = async ({ params, preview }) => {
-  const postRes = await request({
-    query: ARTICLE_QUERY,
-    variables: { slug: params.slug },
-  })
+  try {
+    const postRes = await request({
+      query: ARTICLE_QUERY,
+      variables: { slug: params.slug },
+    })
 
-  const relatedRes = await request({
-    query: RELATED_ARTICLES_QUERY,
-    variables: { categoryId: postRes.post.category.id, postId: postRes.post.id },
-  })
+    const relatedRes = await request({
+      query: RELATED_ARTICLES_QUERY,
+      variables: {
+        categoryId: postRes.post.category.id,
+        postId: postRes.post.id,
+      },
+    })
 
-  return {
-    props: {
-      postData: postRes.post,
-      related: relatedRes.allPosts,
-    },
-    revalidate: 120,
+    return {
+      props: {
+        postData: postRes.post,
+        related: relatedRes.allPosts,
+      },
+      revalidate: 120,
+    }
+  } catch (error) {
+    return {
+      notFound: true,
+    }
   }
 }
 
