@@ -18,7 +18,7 @@
 const LandingPage = () => {
   return (
     <div>
-      {/* <HeroSection /> */}
+      <HeroSection />
       {/* <Map /> */}
       {/* <FreeAudit /> */}
       {/* <SitesList /> */}
