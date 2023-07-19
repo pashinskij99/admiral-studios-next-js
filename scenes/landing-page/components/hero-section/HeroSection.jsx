@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '../../../../components'
-import Wave from '../../../../components/wave/Wave'
+// import Wave from '../../../../components/wave/Wave'
 
 import heroBack from '../../../../images/landing/hero/hero-back-new.webp'
 import heroBackMobile from '../../../../images/landing/hero/hero-back-mobile.webp'
