@@ -1,9 +1,12 @@
-import {
-  // MetaTags,
-  Footer,
-  // Toast,
-  Header,
-} from '../index'
+import dynamic from 'next/dynamic'
+import { MetaTags, Toast, Header } from '../index'
+
+const DynamicFooter = dynamic(
+  () => import('../index').then((data) => data.Footer),
+  {
+    ssr: false,
+  }
+)
 
 const Wrapper = ({
   title,
@@ -20,13 +23,13 @@ const Wrapper = ({
 }) => {
   return (
     <>
-      {/* <MetaTags
+      <MetaTags
         title={title}
         canonical={canonical}
         description={description}
         keywords='web design, web development, seo, hosting, testing, website development, order website, front-end, back-end, project management'
-      /> */}
-      {/* <Toast /> */}
+      />
+      <Toast />
       <Header
         isWhite={isHeaderWhite}
         bgColor={bgColor}
@@ -37,7 +40,7 @@ const Wrapper = ({
       <main>
         <div>{children}</div>
       </main>
-      {isShowFooter && <Footer isWhite={isFooterWhite} />}
+      {isShowFooter && <DynamicFooter isWhite={isFooterWhite} />}
     </>
   )
 }

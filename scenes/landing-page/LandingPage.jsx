@@ -1,12 +1,12 @@
 import {
-  // AboutUs,
-  // Accordion,
+  AboutUs,
+  Accordion,
   // Advantage,
   FreeAudit,
   HeroSection,
   Map,
-  // SitesList,
-  // WeCan,
+  SitesList,
+  WeCan,
 } from './components'
 // import dynamic from 'next/dynamic'
 
@@ -20,10 +20,10 @@ const LandingPage = () => {
       <HeroSection />
       <Map />
       <FreeAudit />
-      {/* <SitesList /> */}
-      {/* <Accordion /> */}
-      {/* <AboutUs /> */}
-      {/* <WeCan /> */}
+      <SitesList />
+      <Accordion />
+      <AboutUs />
+      <WeCan />
 
       {/*<OurServices />*/}
     </div>
