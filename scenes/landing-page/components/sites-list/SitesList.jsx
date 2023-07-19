@@ -6,15 +6,20 @@ import { colors } from '../../../../styles/variables'
 import styles from './SitesList.module.scss'
 
 import macbookPro16 from '../../../../images/landing/sites-list/macbook-pro-16.webp'
+import macbookPro16Mobile from '../../../../images/landing/sites-list/macbook-pro-16-mobile.webp'
 import ipadPro2020 from '../../../../images/landing/sites-list/ipad-pro-2020.webp'
+import ipadPro2020Mobile from '../../../../images/landing/sites-list/ipad-pro-2020-mobile.webp'
 import ipad2020 from '../../../../images/landing/sites-list/ipad-2020.webp'
+import ipad2020Mobile from '../../../../images/landing/sites-list/ipad-2020-mobile.webp'
 import ipadMini from '../../../../images/landing/sites-list/ipad-mini.webp'
+import ipadMiniMobile from '../../../../images/landing/sites-list/ipad-mini-mobile.webp'
 import yellowLine from '../../../../images/landing/sites-list/sites-yellow-line.svg'
 import Image from 'next/image'
 
 const sitesListData = [
   {
     img: ipad2020,
+    imgMobile: ipad2020Mobile,
     imgAlt: 'Game UA: Компʼютерні ігри, новини, огляди та дати виходу',
     title: 'PRODUCT DEV',
     description: 'Game UA Website',
@@ -26,6 +31,7 @@ const sitesListData = [
   },
   {
     img: macbookPro16,
+    imgMobile: macbookPro16Mobile,
     imgAlt: 'Mitsubishi Motors Ukraine Website on Macbook Pro 16 frame',
     title: 'WEB DEV',
     description: 'Mitsubishi Motors Ukraine Website',
@@ -37,6 +43,7 @@ const sitesListData = [
   },
   {
     img: ipadMini,
+    imgMobile: ipadMiniMobile,
     imgAlt: 'Vector 8 Website on Ipad Mini frame',
     title: 'WEB DEV',
     description: 'Vector8 Website',
@@ -48,6 +55,7 @@ const sitesListData = [
   },
   {
     img: ipadPro2020,
+    imgMobile: ipadPro2020Mobile,
     imgAlt: 'Action Urgent Care Website on Ipad Pro 2020 frame',
     title: 'WEB DEV',
     description: 'Action Urgent Care and Kyla Websites',
@@ -76,6 +84,7 @@ const SitesList = () => {
           <SiteItem
             key={index}
             img={item.img}
+            imgMobile={item.imgMobile}
             imgAlt={item.imgAlt}
             title={item.title}
             description={item.description}

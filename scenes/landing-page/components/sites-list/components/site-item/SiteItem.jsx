@@ -3,6 +3,7 @@ import styles from './SiteItem.module.scss'
 
 const SiteItem = ({
   img,
+  imgMobile,
   imgAlt,
   title,
   description,
@@ -10,7 +11,7 @@ const SiteItem = ({
   color,
   position,
   linkTitle,
-  rel
+  rel,
 }) => {
   return (
     <div
@@ -20,7 +21,10 @@ const SiteItem = ({
         className={styles['site-item-img']}
         style={{ backgroundColor: color }}
       >
-        <Image src={img} alt={imgAlt} />
+        <picture className={styles['picture']}>
+          <source media='(min-width:600px)' srcSet={img.src} />
+          <Image src={imgMobile} alt={imgAlt} />
+        </picture>
       </div>
       <div className={styles['site-item-content']}>
         <h6 className='caption-1 text-weight-bold text-color-black'>{title}</h6>
