@@ -20,12 +20,13 @@ const LandingPage = () => {
     <div>
       <HeroSection />
       <Map />
-      <FreeAudit />
-      <SitesList />
-      <Accordion />
-      <AboutUs />
+      {/* <FreeAudit /> */}
+      {/* <SitesList /> */}
+      {/* <Accordion /> */}
+      {/* <AboutUs /> */}
+      {/* <WeCan /> */}
+
       {/*<OurServices />*/}
-      <WeCan />
     </div>
   )
 }

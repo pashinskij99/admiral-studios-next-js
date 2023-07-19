@@ -23,7 +23,7 @@ const SiteItem = ({
       >
         <picture className={styles['picture']}>
           <source media='(min-width:600px)' srcSet={img.src} />
-          <Image src={imgMobile} alt={imgAlt} />
+          <Image src={imgMobile} alt={imgAlt} loading='lazy' />
         </picture>
       </div>
       <div className={styles['site-item-content']}>
