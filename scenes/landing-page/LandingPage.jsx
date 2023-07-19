@@ -1,14 +1,14 @@
-import {
-  AboutUs,
-  Accordion,
-  // Advantage,
-  FreeAudit,
-  HeroSection,
-  Map,
-  // OurServices,
-  SitesList,
-  WeCan,
-} from './components'
+// import // AboutUs,
+// Accordion,
+// Advantage,
+// FreeAudit,
+// HeroSection,
+// Map,
+// SitesList,
+// WeCan,
+
+// OurServices,
+// './components'
 // import dynamic from 'next/dynamic'
 
 // const DynamicMap = dynamic(() => import('./components/map/Map'), {
@@ -18,7 +18,7 @@ import {
 const LandingPage = () => {
   return (
     <div>
-      <HeroSection />
+      {/* <HeroSection /> */}
       {/* <Map /> */}
       {/* <FreeAudit /> */}
       {/* <SitesList /> */}
