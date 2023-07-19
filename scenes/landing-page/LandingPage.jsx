@@ -14,7 +14,7 @@ const LandingPage = () => {
   return (
     <div>
       <HeroSection />
-      {/* <Map /> */}
+      <Map />
       <FreeAudit />
       <SitesList />
       <Accordion />
