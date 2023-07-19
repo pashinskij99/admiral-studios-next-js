@@ -8,11 +8,11 @@ import {
   SitesList,
   WeCan,
 } from './components'
-// import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic'
 
-// const DynamicMap = dynamic(() => import('./components/map/Map'), {
-//   ssr: false,
-// })
+const DynamicAccordion = dynamic(() =>
+  import('./components/accordion/Accordion').then((data) => data.default)
+)
 
 const LandingPage = () => {
   return (
@@ -21,7 +21,8 @@ const LandingPage = () => {
       <Map />
       <FreeAudit />
       <SitesList />
-      <Accordion />
+      <DynamicAccordion />
+      {/* <Accordion /> */}
       <AboutUs />
       <WeCan />
 
