@@ -4,12 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Button } from '../../../../components'
-import Wave from '../../../../components/wave/Wave'
+// import Wave from '../../../../components/wave/Wave'
 
 import heroBack from '../../../../images/landing/hero/hero-back-new.webp'
 import heroBackMobile from '../../../../images/landing/hero/hero-back-mobile.webp'
 
 import styles from './HeroSection.module.scss'
+import dynamic from 'next/dynamic'
+
+const DynamicWave = dynamic(() =>
+  import('../../../../components/wave/Wave').then((data) => data.default)
+)
 
 const HeroSection = () => {
   return (
@@ -32,7 +37,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className={styles['hero-wave']}>
-        <Wave
+        <DynamicWave
           fill='#ffffff'
           paused={false}
           height={30}
