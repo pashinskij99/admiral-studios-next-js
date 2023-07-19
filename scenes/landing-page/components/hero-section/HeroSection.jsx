@@ -32,14 +32,14 @@ const HeroSection = () => {
         </div>
       </div>
       <div className={styles['hero-wave']}>
-        <Wave
+        {/* <Wave
           fill='#ffffff'
           paused={false}
           height={30}
           amplitude={30}
           speed={0.15}
           points={3}
-        />
+        /> */}
       </div>
     </div>
   )
