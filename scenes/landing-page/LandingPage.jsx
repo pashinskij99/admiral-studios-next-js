@@ -1,6 +1,6 @@
 import {
   AboutUs,
-  Accordion,
+  // Accordion,
   // Advantage,
   FreeAudit,
   HeroSection,
