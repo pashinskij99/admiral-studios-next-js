@@ -1,4 +1,9 @@
-import { MetaTags, Footer, Toast, Header } from '../index'
+import {
+  // MetaTags,
+  Footer,
+  // Toast,
+  Header,
+} from '../index'
 
 const Wrapper = ({
   title,
@@ -15,13 +20,13 @@ const Wrapper = ({
 }) => {
   return (
     <>
-      <MetaTags
+      {/* <MetaTags
         title={title}
         canonical={canonical}
         description={description}
         keywords='web design, web development, seo, hosting, testing, website development, order website, front-end, back-end, project management'
-      />
-      <Toast />
+      /> */}
+      {/* <Toast /> */}
       <Header
         isWhite={isHeaderWhite}
         bgColor={bgColor}

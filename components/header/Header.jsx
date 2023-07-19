@@ -15,21 +15,21 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
 
   let timer
 
-  // const handleScroll = () => {
-  //   clearTimeout(timer)
-  //   setIsScrolling(true)
-  //   timer = setTimeout(() => {
-  //     setIsScrolling(false)
-  //   }, 150)
-  // }
+  const handleScroll = () => {
+    clearTimeout(timer)
+    setIsScrolling(true)
+    timer = setTimeout(() => {
+      setIsScrolling(false)
+    }, 150)
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll, false)
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, false)
 
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll, false)
-  //   }
-  // }, [])
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false)
+    }
+  }, [])
 
   return (
     <header
