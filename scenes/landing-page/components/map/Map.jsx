@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 // import ReactTooltip from 'react-tooltip'
 
 import Wave from '../../../../components/wave/Wave'
-// import { MapChart } from './components'
+import { MapChart } from './components'
 import geography from './components/map-chart/map-info.json'
 
 import styles from './Map.module.scss'
@@ -14,12 +14,12 @@ const DynamicReactTooltip = dynamic(() => import('react-tooltip'), {
   ssr: false,
 })
 
-const DynamicMapChart = dynamic(
-  () => import('./components').then((mod) => mod.MapChart),
-  {
-    ssr: false,
-  }
-)
+// const DynamicMapChart = dynamic(
+//   () => import('./components').then((mod) => mod.MapChart),
+//   {
+//     ssr: false,
+//   }
+// )
 
 const Map = () => {
   const [content, setContent] = useState('')
@@ -59,7 +59,7 @@ const Map = () => {
         catapult your online presence to unprecedented heights, making your
         business thrive globally.
       </p>
-      <DynamicMapChart
+      <MapChart
         setPercentWork={setPercentWork}
         setTooltipContent={setContent}
       />
