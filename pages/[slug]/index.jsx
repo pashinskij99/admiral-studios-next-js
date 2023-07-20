@@ -236,7 +236,7 @@ export const getStaticProps = async ({ params, preview }) => {
         postData: postRes.post,
         related: relatedRes.allPosts,
       },
-      revalidate: 120,
+      revalidate: 150,
     }
   } catch (error) {
     return {
