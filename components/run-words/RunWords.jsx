@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 
 import styles from './RunWords.module.scss'
 
@@ -7,10 +7,16 @@ const RunWords = ({ words, wordPadding, speedAnimation }) => {
   const runWords = useRef()
 
   useEffect(() => {
-    setTimeout(() => {
-      const runWidth = Array.from(runWords.current.children).reduce((sum, span) => {
-        return (sum += span.offsetWidth)
-      }, 0)
+    setTimeout(async () => {
+      const runWidth = Array.from(runWords.current.children).reduce(
+        (sum, span) => {
+          return (sum += span.offsetWidth)
+        },
+        0
+      )
+
+      const gsap = (await import('gsap')).default
+
       gsap.to(runWords.current, {
         duration: speedAnimation,
         x: -runWidth / 2,
