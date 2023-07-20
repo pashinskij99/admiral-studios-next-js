@@ -8,6 +8,7 @@ const nextConfig = {
       exclude: ['log'],
     },
   },
+  legacyBrowsers: false,
   // experimental: {
   //   forceSwcTransforms: true,
   // },
