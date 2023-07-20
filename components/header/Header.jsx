@@ -64,6 +64,7 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
         </Link>
         <div className={styles['header-wrapper']}>
           <Link
+            prefetch={false}
             href='/blog'
             className={`${styles['header-blog-text']} ${
               isWhite ? 'link-underline-black' : ''
@@ -76,7 +77,7 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
             Blog
           </Link>
           {isShowContactUs && (
-            <Link href='/contact'>
+            <Link prefetch={false} href='/contact'>
               <Button>Contact Us</Button>
             </Link>
           )}

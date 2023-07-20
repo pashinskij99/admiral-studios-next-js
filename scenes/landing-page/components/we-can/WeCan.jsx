@@ -1,7 +1,7 @@
 /** @format */
 
 import { useRef, useState } from 'react'
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -30,22 +30,24 @@ const weCanData = [
   {
     title: 'Seo',
     description: [
-      'Elevate your website\'s performance with our top-notch SEO services, designed to drive organic traffic directly to your doorstep.',
-      'Through comprehensive SEO solutions, we implement powerful strategies that can substantially increase your website\'s traffic and visibility.',
+      "Elevate your website's performance with our top-notch SEO services, designed to drive organic traffic directly to your doorstep.",
+      "Through comprehensive SEO solutions, we implement powerful strategies that can substantially increase your website's traffic and visibility.",
     ],
     buttonText: 'Boost SEO',
   },
   {
     title: 'Hosting',
     description: [
-      'Experience seamless website performance with our secure and fast web hosting services, ensuring your visitors don\'t have to wait.',
+      "Experience seamless website performance with our secure and fast web hosting services, ensuring your visitors don't have to wait.",
       'Our high-performance web hosting not only guarantees speed but also comes with hassle-free management, leaving you with more time to focus on your business.',
     ],
     buttonText: 'Host my website',
   },
   {
     title: 'Other',
-    description: ['Whatever else you are looking for - we are ready to discuss!'],
+    description: [
+      'Whatever else you are looking for - we are ready to discuss!',
+    ],
     buttonText: "Let's discuss",
   },
 ]
@@ -59,15 +61,20 @@ const WeCan = () => {
         buttonText: item.buttonText,
         active: index === 0,
       }
-    }),
+    })
   )
   const [stage, setStage] = useState(0)
 
   const descriptionRef = useRef()
 
-  const handleChangeActive = (item, index) => {
+  const handleChangeActive = async (item, index) => {
     setStage(index)
-    gsap.to(descriptionRef.current, { duration: 0.2, transformOrigin: '50% 50%', scale: 0 })
+    const gsap = (await import('gsap')).default
+    gsap.to(descriptionRef.current, {
+      duration: 0.2,
+      transformOrigin: '50% 50%',
+      scale: 0,
+    })
     setTimeout(() => {
       setData(
         data.map((el) => {
@@ -75,9 +82,13 @@ const WeCan = () => {
             ...el,
             active: item.title === el.title,
           }
-        }),
+        })
       )
-      gsap.to(descriptionRef.current, { duration: 0.2, transformOrigin: '50% 50%', scale: 1 })
+      gsap.to(descriptionRef.current, {
+        duration: 0.2,
+        transformOrigin: '50% 50%',
+        scale: 1,
+      })
     }, 100)
   }
 
@@ -91,7 +102,9 @@ const WeCan = () => {
         alt='Yellow decoration line'
       />
       <div className='container'>
-        <h6 className='text-3 text-weight-bold text-color-black'>Explore Our Diverse Range of Tailored Web Solutions</h6>
+        <h6 className='text-3 text-weight-bold text-color-black'>
+          Explore Our Diverse Range of Tailored Web Solutions
+        </h6>
         <div className={styles['we-can-content']}>
           <ul className={styles['we-can-content-list']}>
             {data.map((item, index) => (
@@ -100,7 +113,8 @@ const WeCan = () => {
                 key={index}
                 className={`${styles['we-can-content-list-item']} ${
                   item.active && styles['we-can-content-list-item-active']
-                } title-1 text-weight-bold text-color-black`}>
+                } title-1 text-weight-bold text-color-black`}
+              >
                 {item.title}
               </li>
             ))}
@@ -112,18 +126,23 @@ const WeCan = () => {
                   item.active && (
                     <div key={item.title}>
                       {item.description.map((text, index) => (
-                        <div key={index} className={styles['we-can-content-description-text']}>
+                        <div
+                          key={index}
+                          className={styles['we-can-content-description-text']}
+                        >
                           <span className='text-1 text-weight-regular text-color-silver'>{`0${
                             index + 1
                           }`}</span>
-                          <p className='headline-3 text-weight-regular text-color-black'>{text}</p>
+                          <p className='headline-3 text-weight-regular text-color-black'>
+                            {text}
+                          </p>
                         </div>
                       ))}
-                      <Link href='/contact'>
+                      <Link prefetch={false} href='/contact'>
                         <Button>{item.buttonText}</Button>
                       </Link>
                     </div>
-                  ),
+                  )
               )}
             </div>
           </div>
