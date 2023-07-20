@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic'
 import {
+  Header,
   MetaTags,
-  // Toast,
+  Toast,
   // Header
 } from '../index'
 
@@ -9,12 +10,12 @@ const DynamicFooter = dynamic(() =>
   import('../index').then((data) => data.Footer)
 )
 
-const DynamicHeader = dynamic(() =>
-  import('../index').then((data) => data.Header)
-)
-const DynamicToast = dynamic(() =>
-  import('../index').then((data) => data.Toast)
-)
+// const DynamicHeader = dynamic(() =>
+//   import('../index').then((data) => data.Header)
+// )
+// const DynamicToast = dynamic(() =>
+//   import('../index').then((data) => data.Toast)
+// )
 
 const Wrapper = ({
   title,
@@ -37,9 +38,9 @@ const Wrapper = ({
         description={description}
         keywords='web design, web development, seo, hosting, testing, website development, order website, front-end, back-end, project management'
       />
-      <DynamicToast />
-      {/* <Toast /> */}
-      <DynamicHeader
+      {/* <DynamicToast /> */}
+      <Toast />
+      <Header
         isWhite={isHeaderWhite}
         bgColor={bgColor}
         textColor={textColor}
