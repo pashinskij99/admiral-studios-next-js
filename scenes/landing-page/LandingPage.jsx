@@ -18,8 +18,9 @@ const DynamicSitesList = dynamic(() =>
   import('./components/sites-list/SitesList').then((data) => data.default)
 )
 
-const DynamicAboutUs = dynamic(() =>
-  import('./components/about-us/AboutUs').then((data) => data.default)
+const DynamicAboutUs = dynamic(
+  () => import('./components/about-us/AboutUs').then((data) => data.default),
+  { ssr: false }
 )
 
 const DynamicWeCan = dynamic(() =>

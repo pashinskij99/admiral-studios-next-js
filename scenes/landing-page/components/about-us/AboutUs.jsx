@@ -3,10 +3,14 @@ import dynamic from 'next/dynamic'
 
 import styles from './AboutUs.module.scss'
 
-const DynamicRunWords = dynamic(() =>
-  import('../../../../components/run-words/RunWords').then(
-    (data) => data.default
-  )
+const DynamicRunWords = dynamic(
+  () =>
+    import('../../../../components/run-words/RunWords').then(
+      (data) => data.default
+    ),
+  {
+    ssr: false,
+  }
 )
 
 const AboutUs = () => {
