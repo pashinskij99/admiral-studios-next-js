@@ -116,7 +116,7 @@ const OurServices = () => {
 
         clearTimeout(diffTimeOut)
 
-        const gsap = (await import('gsap')).default
+        // const gsap = (await import('gsap')).default
 
         diffTimeOut = setTimeout(() => {
           gsap.to(moveEl.current, {
@@ -162,12 +162,12 @@ const OurServices = () => {
           <div
             className={styles['our-services-content-links']}
             onMouseEnter={async () => {
-              const gsap = (await import('gsap')).default
+              // const gsap = (await import('gsap')).default
 
               gsap.to(moveEl.current, { opacity: 1 })
             }}
             onMouseLeave={async () => {
-              const gsap = (await import('gsap')).default
+              // const gsap = (await import('gsap')).default
 
               gsap.to(moveEl.current, { opacity: 0 })
             }}

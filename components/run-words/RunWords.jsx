@@ -15,7 +15,7 @@ const RunWords = ({ words, wordPadding, speedAnimation }) => {
         0
       )
 
-      const gsap = (await import('gsap')).default
+      // const gsap = (await import('gsap')).default
 
       gsap.to(runWords.current, {
         duration: speedAnimation,

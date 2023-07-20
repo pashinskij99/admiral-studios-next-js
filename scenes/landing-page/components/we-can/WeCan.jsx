@@ -69,7 +69,7 @@ const WeCan = () => {
 
   const handleChangeActive = async (item, index) => {
     setStage(index)
-    const gsap = (await import('gsap')).default
+    // const gsap = (await import('gsap')).default
     gsap.to(descriptionRef.current, {
       duration: 0.2,
       transformOrigin: '50% 50%',

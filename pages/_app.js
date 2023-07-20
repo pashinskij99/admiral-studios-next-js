@@ -1,15 +1,16 @@
 import '../styles/globals.scss'
 // import { useEffect } from 'react'
 // import TagManager from 'react-gtm-module'
-// import { Manrope } from 'next/font/google'
+// import fonts from '@next/font/google'
 
-// const manrope = Manrope({
+// const manrope = fonts.Manrope({
 //   weight: ['700'],
 //   display: 'swap',
 //   subsets: ['latin'],
 // })
 
 const MyApp = ({ Component, pageProps }) => {
+  // console.log(manrope)
   return (
     // <>
     //   <style jsx global>{`
