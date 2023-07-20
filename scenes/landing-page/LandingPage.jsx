@@ -2,7 +2,7 @@ import {
   // AboutUs,
   // Accordion,
   // Advantage,
-  FreeAudit,
+  // FreeAudit,
   HeroSection,
   Map,
   // SitesList,
@@ -12,6 +12,10 @@ import dynamic from 'next/dynamic'
 
 const DynamicAccordion = dynamic(() =>
   import('./components/accordion/Accordion').then((data) => data.default)
+)
+
+const DynamicFreeAudit = dynamic(() =>
+  import('./components/free-audit/FreeAudit').then((data) => data.default)
 )
 
 const DynamicSitesList = dynamic(() =>
@@ -31,7 +35,8 @@ const LandingPage = () => {
     <div>
       <HeroSection />
       <Map />
-      <FreeAudit />
+      {/* <FreeAudit /> */}
+      <DynamicFreeAudit />
       {/* <SitesList /> */}
       <DynamicSitesList />
       <DynamicAccordion />
