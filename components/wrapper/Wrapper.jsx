@@ -5,24 +5,15 @@ import {
   // Header
 } from '../index'
 
-const DynamicFooter = dynamic(
-  () => import('../index').then((data) => data.Footer),
-  {
-    ssr: false,
-  }
+const DynamicFooter = dynamic(() =>
+  import('../index').then((data) => data.Footer)
 )
 
-const DynamicHeader = dynamic(
-  () => import('../index').then((data) => data.Header),
-  {
-    ssr: false,
-  }
+const DynamicHeader = dynamic(() =>
+  import('../index').then((data) => data.Header)
 )
-const DynamicToast = dynamic(
-  () => import('../index').then((data) => data.Toast),
-  {
-    ssr: false,
-  }
+const DynamicToast = dynamic(() =>
+  import('../index').then((data) => data.Toast)
 )
 
 const Wrapper = ({
