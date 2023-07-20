@@ -6,8 +6,11 @@ import {
   // Header
 } from '../index'
 
-const DynamicFooter = dynamic(() =>
-  import('../index').then((data) => data.Footer)
+const DynamicFooter = dynamic(
+  () => import('../index').then((data) => data.Footer),
+  {
+    ssr: false,
+  }
 )
 
 // const DynamicHeader = dynamic(() =>
