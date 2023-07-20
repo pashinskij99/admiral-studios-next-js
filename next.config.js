@@ -2,12 +2,18 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    forceSwcTransforms: true,
+  swcMinify: true,
+  compiler: {
+    removeConsole: {
+      exclude: ['log'],
+    },
   },
-  images: {
-    unoptimized: true,
-  },
+  // experimental: {
+  //   forceSwcTransforms: true,
+  // },
+  // images: {
+  //   unoptimized: true,
+  // },
   // async redirects() {
   //   return [
   //     {
