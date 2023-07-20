@@ -2,8 +2,11 @@ import dynamic from 'next/dynamic'
 // import { FreeAuditForm } from './components'
 import styles from './FreeAudit.module.scss'
 
-const DynamicFreeAuditForm = dynamic(() =>
-  import('./components/index').then((data) => data.FreeAuditForm)
+const DynamicFreeAuditForm = dynamic(
+  () => import('./components/index').then((data) => data.FreeAuditForm),
+  {
+    ssr: false,
+  }
 )
 
 const FreeAudit = () => {

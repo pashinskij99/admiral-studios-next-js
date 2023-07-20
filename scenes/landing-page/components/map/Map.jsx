@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 // import ReactTooltip from 'react-tooltip'
 
 import Wave from '../../../../components/wave/Wave'
-import { MapChart } from './components'
-import geography from './components/map-chart/map-info.json'
+// import { MapChart } from './components'
+// import geography from './components/map-chart/map-info.json'
 
 import styles from './Map.module.scss'
 import dynamic from 'next/dynamic'
@@ -13,6 +13,13 @@ import dynamic from 'next/dynamic'
 const DynamicReactTooltip = dynamic(() => import('react-tooltip'), {
   ssr: false,
 })
+
+const DynamicMapChart = dynamic(
+  () => import('./components/index').then((data) => data.MapChart),
+  {
+    ssr: false,
+  }
+)
 
 // const DynamicMapChart = dynamic(
 //   () => import('./components').then((mod) => mod.MapChart),
@@ -23,22 +30,22 @@ const DynamicReactTooltip = dynamic(() => import('react-tooltip'), {
 
 const Map = () => {
   const [content, setContent] = useState('')
-  const [percentWork, setPercentWork] = useState(0)
+  // const [percentWork, setPercentWork] = useState(0)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
 
-    const allCounty = geography.objects.world.geometries.length
-    const weWorkCounty = geography.objects.world.geometries.reduce(
-      (sum, item) => {
-        item.properties['we-work'] && sum++
-        return sum
-      },
-      0
-    )
+    // const allCounty = geography.objects.world.geometries.length
+    // const weWorkCounty = geography.objects.world.geometries.reduce(
+    //   (sum, item) => {
+    //     item.properties['we-work'] && sum++
+    //     return sum
+    //   },
+    //   0
+    // )
 
-    setPercentWork(Math.round((weWorkCounty / allCounty) * 100))
+    // setPercentWork(Math.round((weWorkCounty / allCounty) * 100))
   }, [])
 
   return (
@@ -59,8 +66,8 @@ const Map = () => {
         catapult your online presence to unprecedented heights, making your
         business thrive globally.
       </p>
-      <MapChart
-        setPercentWork={setPercentWork}
+      <DynamicMapChart
+        // setPercentWork={setPercentWork}
         setTooltipContent={setContent}
       />
       {isMounted && (
