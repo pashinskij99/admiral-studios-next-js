@@ -3,11 +3,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  compiler: {
-    removeConsole: {
-      exclude: ['log'],
-    },
-  },
+  // compiler: {
+  //   removeConsole: {
+  //     exclude: ['log'],
+  //   },
+  // },
   legacyBrowsers: false,
   // experimental: {
   //   forceSwcTransforms: true,
@@ -27,13 +27,13 @@ const nextConfig = {
   env: {
     NEXT_DATOCMS_API_TOKEN: process.env.NEXT_DATOCMS_API_TOKEN,
   },
-  webpack: (config, { isServer }) => {
-    config.resolve.fallback = { fs: false }
+  // webpack: (config, { isServer }) => {
+  //   config.resolve.fallback = { fs: false }
 
-    if (isServer) require('./server-scripts/sitemap-generator')
+  //   if (isServer) require('./server-scripts/sitemap-generator')
 
-    return config
-  },
+  //   return config
+  // },
 }
 
 module.exports = nextConfig

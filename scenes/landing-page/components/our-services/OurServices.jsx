@@ -2,7 +2,6 @@
 
 import { useRef, useState } from 'react'
 import Image from 'next/image'
-import { gsap } from 'gsap'
 
 import styles from './OurServices.module.scss'
 
@@ -109,13 +108,15 @@ const OurServices = () => {
       onMouseEnter={() => {
         moveEl.current.style.display = 'block'
       }}
-      onMouseMove={(e) => {
+      onMouseMove={async (e) => {
         moveEl.current.style.left =
           e.clientX - moveEl.current.offsetWidth / 2 + 'px'
         moveEl.current.style.top =
           e.clientY - moveEl.current.offsetHeight / 2 + 'px'
 
         clearTimeout(diffTimeOut)
+
+        const gsap = (await import('gsap')).default
 
         diffTimeOut = setTimeout(() => {
           gsap.to(moveEl.current, {
@@ -160,10 +161,14 @@ const OurServices = () => {
         <div className={styles['our-services-content']}>
           <div
             className={styles['our-services-content-links']}
-            onMouseEnter={() => {
+            onMouseEnter={async () => {
+              const gsap = (await import('gsap')).default
+
               gsap.to(moveEl.current, { opacity: 1 })
             }}
-            onMouseLeave={() => {
+            onMouseLeave={async () => {
+              const gsap = (await import('gsap')).default
+
               gsap.to(moveEl.current, { opacity: 0 })
             }}
           >
