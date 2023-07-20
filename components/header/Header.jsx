@@ -47,6 +47,7 @@ const Header = ({ isWhite = false, isShowContactUs, bgColor, isShowBlog }) => {
             <Image
               src={isWhite ? logoAdmiralDark : logoAdmiral}
               alt='Admiral Studios logo'
+              priority
               width={88}
               height={56}
             />

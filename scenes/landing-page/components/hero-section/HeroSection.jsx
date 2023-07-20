@@ -32,7 +32,11 @@ const HeroSection = () => {
           </Link>
           <picture className={styles.picture}>
             <source media='(min-width:600px)' srcSet={heroBack.src} />
-            <Image src={heroBackMobile} alt='Hero section background image' />
+            <Image
+              priority
+              src={heroBackMobile}
+              alt='Hero section background image'
+            />
           </picture>
         </div>
       </div>
