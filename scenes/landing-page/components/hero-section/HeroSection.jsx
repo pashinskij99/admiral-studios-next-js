@@ -10,7 +10,7 @@ import heroBack from '../../../../images/landing/hero/hero-back-new.webp'
 import heroBackMobile from '../../../../images/landing/hero/hero-back-mobile.webp'
 
 import styles from './HeroSection.module.scss'
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
 // const DynamicWave = dynamic(() =>
 //   import('../../../../components/wave/Wave').then((data) => data.default)
